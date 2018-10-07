@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMS_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="RecruitmentCandidate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CandidateType" Type="int" />
+    <Property Name="CandidateTypeText" Type="nvarchar" MaxLength="100" />
+    <Property Name="KnowledgeInfoBy" Type="int" />
+    <Property Name="KnowledgeInfoByText" Type="nvarchar" MaxLength="100" />
+    <Property Name="TestPlace" Type="int" />
+    <Property Name="TestPlaceText" Type="nvarchar" MaxLength="100" />
+    <Property Name="TestLanguage" Type="int" />
+    <Property Name="TestLanguageText" Type="nvarchar" MaxLength="100" />
+    <Property Name="TestNo" Type="int" />
+    <Property Name="TestedPlace" Type="int" />
+    <Property Name="TestedPlaceText" Type="nvarchar" MaxLength="100" />
+    <Property Name="TestedDate" Type="datetime" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="PlaceOfOrigin" Type="nvarchar" MaxLength="200" />
+    <Property Name="IdentityOrPassportNo" Type="varchar" MaxLength="20" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="IssuePlace" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone1" Type="varchar" MaxLength="15" />
+    <Property Name="Phone2" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="EducationLevel" Type="int" />
+    <Property Name="EducationLevelText" Type="nvarchar" MaxLength="100" />
+    <Property Name="ForeignLanguageLevel" Type="int" />
+    <Property Name="ForeignLanguageLevelText" Type="nvarchar" MaxLength="100" />
+    <Property Name="ForeignLanguageTestedDate" Type="datetime" />
+    <Property Name="ForeignLanguageTestedPoint" Type="float" />
+    <Property Name="ForeignLanguageOther" Type="varchar" MaxLength="30" />
+    <Property Name="Gifted" Type="nvarchar" MaxLength="200" />
+    <Property Name="PastCompany" Type="nvarchar" MaxLength="200" />
+    <Property Name="AttachmentID" Type="int" />
+    <Property Name="PrivateKey" Type="varchar" MaxLength="50" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="CMS_DEVModelStoreContainer">
+    <EntitySet Name="RecruitmentCandidate" EntityType="Self.RecruitmentCandidate" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

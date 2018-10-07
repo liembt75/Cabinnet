@@ -1,0 +1,1345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B931B9F0-B441-406F-9882-42818DF240A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrewInfo</RootNamespace>
+    <AssemblyName>VNCR Station</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\icon256.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DeltaCompressionDotNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d14d6e5194e7f4a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeltaCompressionDotNet.1.0.0\lib\net45\DeltaCompressionDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DeltaCompressionDotNet.MsDelta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=46b2138a390abf55, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeltaCompressionDotNet.1.0.0\lib\net45\DeltaCompressionDotNet.MsDelta.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DeltaCompressionDotNet.PatchApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3e8888ee913ed789, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeltaCompressionDotNet.1.0.0\lib\net45\DeltaCompressionDotNet.PatchApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.2" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v15.2" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraTreeList.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\squirrel.windows.1.5.2\lib\Net45\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.9.6.1\lib\net45\Mono.Cecil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.9.6.1\lib\net45\Mono.Cecil.Mdb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.9.6.1\lib\net45\Mono.Cecil.Pdb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.9.6.1\lib\net45\Mono.Cecil.Rocks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Squirrel, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\squirrel.windows.1.5.2\lib\Net45\NuGet.Squirrel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sabreapi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SabreLibs\Sabreapi.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Barcode, Version=2.9.0.11040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Barcode.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Common, Version=1.9.0.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DataExport, Version=3.5.131.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.DataExport.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DataExport.ResourceMgr, Version=1.6.71.4040, Culture=neutral, PublicKeyToken=4bc1500157862925, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.DataExport.ResourceMgr.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=6.9.11.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Doc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DocViewer.Forms, Version=3.9.1.5040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.DocViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Email, Version=1.3.2.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Email.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.License.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.OfficeViewer.Forms, Version=3.9.1.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.OfficeViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=4.9.4.2040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=3.9.2.3340, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.PdfViewer.Asp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=3.9.2.3340, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.PdfViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Presentation, Version=3.9.5.9040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Spreadsheet, Version=2.9.0.8040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=8.9.4.6040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.XLS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Splat, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Splat.1.6.2\lib\Net45\Splat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Squirrel, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\squirrel.windows.1.5.2\lib\Net45\Squirrel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADONet\DsFlightCrews.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsFlightCrews.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ADONet\dsForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsForm.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ADONet\dsMetting.cs">
+      <DependentUpon>dsMetting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ADONet\dsMetting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMetting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ADONet\dsOJT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOJT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ADONet\dsSurvey.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSurvey.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ADONet\dsSurveyAT.cs">
+      <DependentUpon>dsSurveyAT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ADONet\dsSurveyAT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSurveyAT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ERMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Analysis\FrmAnlFlightinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Analysis\FrmAnlFlightinfo.Designer.cs">
+      <DependentUpon>FrmAnlFlightinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Briefing\FrmAddBrfDiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Briefing\FrmAddBrfDiary.Designer.cs">
+      <DependentUpon>FrmAddBrfDiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Briefing\FrmBriefingDiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Briefing\FrmBriefingDiary.Designer.cs">
+      <DependentUpon>FrmBriefingDiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExternalUnit\FrmFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExternalUnit\FrmFlight.Designer.cs">
+      <DependentUpon>FrmFlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Meeting\FrmMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Meeting\FrmMeeting.Designer.cs">
+      <DependentUpon>FrmMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Meeting\FrmMeetingCustomChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Meeting\FrmMeetingCustomChart.Designer.cs">
+      <DependentUpon>FrmMeetingCustomChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Meeting\FrmMeetingData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Meeting\FrmMeetingData.Designer.cs">
+      <DependentUpon>FrmMeetingData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NghiMat\FrmTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NghiMat\FrmTour.Designer.cs">
+      <DependentUpon>FrmTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NghiMat\FrmTourImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NghiMat\FrmTourImport.Designer.cs">
+      <DependentUpon>FrmTourImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NghiMat\FrmTourRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NghiMat\FrmTourRegister.Designer.cs">
+      <DependentUpon>FrmTourRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ojt\FrmOJT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ojt\FrmOJT.Designer.cs">
+      <DependentUpon>FrmOJT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ojt\FrmOjtCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ojt\FrmOjtCategory.Designer.cs">
+      <DependentUpon>FrmOjtCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Survey\FrmSurvey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Survey\FrmSurvey.Designer.cs">
+      <DependentUpon>FrmSurvey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Survey\FrmSurveyBankingItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Survey\FrmSurveyBankingItem.Designer.cs">
+      <DependentUpon>FrmSurveyBankingItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Survey\FrmSurveyCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Survey\FrmSurveyCategory.Designer.cs">
+      <DependentUpon>FrmSurveyCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmBankingQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmBankingQuestion.Designer.cs">
+      <DependentUpon>FrmBankingQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmExam.Designer.cs">
+      <DependentUpon>FrmExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmExamBankingTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmExamBankingTesting.Designer.cs">
+      <DependentUpon>FrmExamBankingTesting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmExamineeBanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmExamineeBanking.Designer.cs">
+      <DependentUpon>FrmExamineeBanking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmImportQuestionBanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmImportQuestionBanking.Designer.cs">
+      <DependentUpon>FrmImportQuestionBanking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmQuestionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\FrmQuestionType.Designer.cs">
+      <DependentUpon>FrmQuestionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HealthCare\FrmAddHealthCare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HealthCare\FrmAddHealthCare.Designer.cs">
+      <DependentUpon>FrmAddHealthCare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HealthCare\FrmManagementHealthCare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HealthCare\FrmManagementHealthCare.Designer.cs">
+      <DependentUpon>FrmManagementHealthCare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HealthCare\FrmUpdateHealthCare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HealthCare\FrmUpdateHealthCare.Designer.cs">
+      <DependentUpon>FrmUpdateHealthCare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Labor\FrmRecruitmentCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Labor\FrmRecruitmentCandidate.Designer.cs">
+      <DependentUpon>FrmRecruitmentCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\System\FrmActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\System\FrmActivity.Designer.cs">
+      <DependentUpon>FrmActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFlightForSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFlightForSalary.designer.cs">
+      <DependentUpon>FrmFlightForSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\System\FrmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\System\FrmRole.designer.cs">
+      <DependentUpon>FrmRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\System\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\System\FrmUser.designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Task\FrmManagementTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Task\FrmManagementTask.Designer.cs">
+      <DependentUpon>FrmManagementTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Task\FrmTaskEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Task\FrmTaskEdit.Designer.cs">
+      <DependentUpon>FrmTaskEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\frmAddRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\frmAddRoute.Designer.cs">
+      <DependentUpon>frmAddRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmAddTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmAddTicket.Designer.cs">
+      <DependentUpon>FrmAddTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmComment.Designer.cs">
+      <DependentUpon>FrmComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmFormDetailHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmFormDetailHistory.Designer.cs">
+      <DependentUpon>FrmFormDetailHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmManageFormDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmManageFormDetail.Designer.cs">
+      <DependentUpon>FrmManageFormDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmManageReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmManageReport.Designer.cs">
+      <DependentUpon>FrmManageReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmManageTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmManageTicket.Designer.cs">
+      <DependentUpon>FrmManageTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmReportDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmReportDetail.Designer.cs">
+      <DependentUpon>FrmReportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmSoCongVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmSoCongVan.Designer.cs">
+      <DependentUpon>FrmSoCongVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmTicket.Designer.cs">
+      <DependentUpon>FrmTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmTicketAirport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmTicketAirport.Designer.cs">
+      <DependentUpon>FrmTicketAirport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmTicketBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\FrmTicketBooking.Designer.cs">
+      <DependentUpon>FrmTicketBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmAirlineCrew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmAirlineCrew.Designer.cs">
+      <DependentUpon>FrmAirlineCrew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmAttachmentDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmAttachmentDetail.Designer.cs">
+      <DependentUpon>FrmAttachmentDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\System\FrmDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\System\FrmDevice.Designer.cs">
+      <DependentUpon>FrmDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmDutyFree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmDutyFree.Designer.cs">
+      <DependentUpon>FrmDutyFree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmDutyFreeImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmDutyFreeImport.Designer.cs">
+      <DependentUpon>FrmDutyFreeImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmEmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmEmMessage.Designer.cs">
+      <DependentUpon>FrmEmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightAssessment.Designer.cs">
+      <DependentUpon>FrmFlightAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReport.Designer.cs">
+      <DependentUpon>FrmFlightFinalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReport2.Designer.cs">
+      <DependentUpon>FrmFlightFinalReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportAddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportAddDepartment.Designer.cs">
+      <DependentUpon>FrmFlightFinalReportAddDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportCategory.Designer.cs">
+      <DependentUpon>FrmFlightFinalReportCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportDepartment.Designer.cs">
+      <DependentUpon>FrmFlightFinalReportDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportDepartmentRely.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportDepartmentRely.Designer.cs">
+      <DependentUpon>FrmFlightFinalReportDepartmentRely.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportDetail.Designer.cs">
+      <DependentUpon>FrmFlightFinalReportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportDetails.Designer.cs">
+      <DependentUpon>FrmFlightFinalReportDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportRepliedLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportRepliedLog.Designer.cs">
+      <DependentUpon>FrmFlightFinalReportRepliedLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportSubCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFinalReportSubCategory.Designer.cs">
+      <DependentUpon>FrmFlightFinalReportSubCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFONetline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightFONetline.Designer.cs">
+      <DependentUpon>FrmFlightFONetline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightInfoSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightInfoSpec.Designer.cs">
+      <DependentUpon>FrmFlightInfoSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightNetLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightNetLine.Designer.cs">
+      <DependentUpon>FrmFlightNetLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFlightSync.Designer.cs">
+      <DependentUpon>FrmFlightSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmForm.Designer.cs">
+      <DependentUpon>FrmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFormAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFormAttachment.Designer.cs">
+      <DependentUpon>FrmFormAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFormCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmFormCategory.Designer.cs">
+      <DependentUpon>FrmFormCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmImportForm.Designer.cs">
+      <DependentUpon>FrmImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmImportFormCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmImportFormCategory.Designer.cs">
+      <DependentUpon>FrmImportFormCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmNews.Designer.cs">
+      <DependentUpon>FrmNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSalAdmin.Designer.cs">
+      <DependentUpon>FrmSalAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSalesForce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSalesForce.Designer.cs">
+      <DependentUpon>FrmSalesForce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSalInsertFlightCrew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSalInsertFlightCrew.Designer.cs">
+      <DependentUpon>FrmSalInsertFlightCrew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSalInsertFlightCrew2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSalInsertFlightCrew2.Designer.cs">
+      <DependentUpon>FrmSalInsertFlightCrew2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSupport.Designer.cs">
+      <DependentUpon>FrmSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSupportDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VNCrew\FrmSupportDetail.Designer.cs">
+      <DependentUpon>FrmSupportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\VNCrewMenu.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\rpCustomMeeting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rpCustomMeeting.Designer.cs">
+      <DependentUpon>rpCustomMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RpForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RpForm.Designer.cs">
+      <DependentUpon>RpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpMeeting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rpMeeting.Designer.cs">
+      <DependentUpon>rpMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RpOJT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RpOJT.Designer.cs">
+      <DependentUpon>RpOJT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RpSurvey.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RpSurvey.Designer.cs">
+      <DependentUpon>RpSurvey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpSurveyAT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rpSurveyAT.Designer.cs">
+      <DependentUpon>rpSurveyAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptFlightCrews.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptFlightCrews.Designer.cs">
+      <DependentUpon>RptFlightCrews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPXemXetHDLD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPXemXetHDLD.Designer.cs">
+      <DependentUpon>RPXemXetHDLD.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Analysis\FrmAnlFlightinfo.resx">
+      <DependentUpon>FrmAnlFlightinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Briefing\FrmAddBrfDiary.resx">
+      <DependentUpon>FrmAddBrfDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Briefing\FrmBriefingDiary.resx">
+      <DependentUpon>FrmBriefingDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExternalUnit\FrmFlight.resx">
+      <DependentUpon>FrmFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Meeting\FrmMeeting.resx">
+      <DependentUpon>FrmMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Meeting\FrmMeetingCustomChart.resx">
+      <DependentUpon>FrmMeetingCustomChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Meeting\FrmMeetingData.resx">
+      <DependentUpon>FrmMeetingData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NghiMat\FrmTour.resx">
+      <DependentUpon>FrmTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NghiMat\FrmTourImport.resx">
+      <DependentUpon>FrmTourImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NghiMat\FrmTourRegister.resx">
+      <DependentUpon>FrmTourRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ojt\FrmOJT.resx">
+      <DependentUpon>FrmOJT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ojt\FrmOjtCategory.resx">
+      <DependentUpon>FrmOjtCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Survey\FrmSurvey.resx">
+      <DependentUpon>FrmSurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Survey\FrmSurveyBankingItem.resx">
+      <DependentUpon>FrmSurveyBankingItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Survey\FrmSurveyCategory.resx">
+      <DependentUpon>FrmSurveyCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exam\FrmBankingQuestion.resx">
+      <DependentUpon>FrmBankingQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exam\FrmExam.resx">
+      <DependentUpon>FrmExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exam\FrmExamBankingTesting.resx">
+      <DependentUpon>FrmExamBankingTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exam\FrmExamineeBanking.resx">
+      <DependentUpon>FrmExamineeBanking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exam\FrmImportQuestionBanking.resx">
+      <DependentUpon>FrmImportQuestionBanking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exam\FrmQuestionType.resx">
+      <DependentUpon>FrmQuestionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFlightForSalary.resx">
+      <DependentUpon>FrmFlightForSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HealthCare\FrmAddHealthCare.resx">
+      <DependentUpon>FrmAddHealthCare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HealthCare\FrmManagementHealthCare.resx">
+      <DependentUpon>FrmManagementHealthCare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HealthCare\FrmUpdateHealthCare.resx">
+      <DependentUpon>FrmUpdateHealthCare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Labor\FrmRecruitmentCandidate.resx">
+      <DependentUpon>FrmRecruitmentCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\System\FrmActivity.resx">
+      <DependentUpon>FrmActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\System\FrmDevice.resx">
+      <DependentUpon>FrmDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\System\FrmRole.resx">
+      <DependentUpon>FrmRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\System\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Task\FrmManagementTask.resx">
+      <DependentUpon>FrmManagementTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Task\FrmTaskEdit.resx">
+      <DependentUpon>FrmTaskEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\frmAddRoute.resx">
+      <DependentUpon>frmAddRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmAddTicket.resx">
+      <DependentUpon>FrmAddTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmComment.resx">
+      <DependentUpon>FrmComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmFormDetailHistory.resx">
+      <DependentUpon>FrmFormDetailHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmManageFormDetail.resx">
+      <DependentUpon>FrmManageFormDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmManageReport.resx">
+      <DependentUpon>FrmManageReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmManageTicket.resx">
+      <DependentUpon>FrmManageTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmReportDetail.resx">
+      <DependentUpon>FrmReportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmSoCongVan.resx">
+      <DependentUpon>FrmSoCongVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmTicket.resx">
+      <DependentUpon>FrmTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmTicketAirport.resx">
+      <DependentUpon>FrmTicketAirport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\FrmTicketBooking.resx">
+      <DependentUpon>FrmTicketBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmAirlineCrew.resx">
+      <DependentUpon>FrmAirlineCrew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmAttachmentDetail.resx">
+      <DependentUpon>FrmAttachmentDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmDutyFree.resx">
+      <DependentUpon>FrmDutyFree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmDutyFreeImport.resx">
+      <DependentUpon>FrmDutyFreeImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmEmMessage.resx">
+      <DependentUpon>FrmEmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightAssessment.resx">
+      <DependentUpon>FrmFlightAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReport.resx">
+      <DependentUpon>FrmFlightFinalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReport2.resx">
+      <DependentUpon>FrmFlightFinalReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReportAddDepartment.resx">
+      <DependentUpon>FrmFlightFinalReportAddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReportCategory.resx">
+      <DependentUpon>FrmFlightFinalReportCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReportDepartment.resx">
+      <DependentUpon>FrmFlightFinalReportDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReportDepartmentRely.resx">
+      <DependentUpon>FrmFlightFinalReportDepartmentRely.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReportDetail.resx">
+      <DependentUpon>FrmFlightFinalReportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReportDetails.resx">
+      <DependentUpon>FrmFlightFinalReportDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReportRepliedLog.resx">
+      <DependentUpon>FrmFlightFinalReportRepliedLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFinalReportSubCategory.resx">
+      <DependentUpon>FrmFlightFinalReportSubCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightFONetline.resx">
+      <DependentUpon>FrmFlightFONetline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightInfoSpec.resx">
+      <DependentUpon>FrmFlightInfoSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightNetLine.resx">
+      <DependentUpon>FrmFlightNetLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFlightSync.resx">
+      <DependentUpon>FrmFlightSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmForm.resx">
+      <DependentUpon>FrmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFormAttachment.resx">
+      <DependentUpon>FrmFormAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmFormCategory.resx">
+      <DependentUpon>FrmFormCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmImportForm.resx">
+      <DependentUpon>FrmImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmImportFormCategory.resx">
+      <DependentUpon>FrmImportFormCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmNews.resx">
+      <DependentUpon>FrmNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmSalAdmin.resx">
+      <DependentUpon>FrmSalAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmSalesForce.resx">
+      <DependentUpon>FrmSalesForce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmSalInsertFlightCrew.resx">
+      <DependentUpon>FrmSalInsertFlightCrew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmSalInsertFlightCrew2.resx">
+      <DependentUpon>FrmSalInsertFlightCrew2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmSupport.resx">
+      <DependentUpon>FrmSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VNCrew\FrmSupportDetail.resx">
+      <DependentUpon>FrmSupportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\rpCustomMeeting.resx">
+      <DependentUpon>rpCustomMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RpForm.resx">
+      <DependentUpon>RpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpMeeting.resx">
+      <DependentUpon>rpMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RpOJT.resx">
+      <DependentUpon>RpOJT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RpSurvey.resx">
+      <DependentUpon>RpSurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpSurveyAT.resx">
+      <DependentUpon>rpSurveyAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptFlightCrews.resx">
+      <DependentUpon>RptFlightCrews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPXemXetHDLD.resx">
+      <DependentUpon>RPXemXetHDLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ADONet\DsFlightCrews.xsc">
+      <DependentUpon>DsFlightCrews.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\DsFlightCrews.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsFlightCrews.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ADONet\DsFlightCrews.xss">
+      <DependentUpon>DsFlightCrews.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsForm.xsc">
+      <DependentUpon>dsForm.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsForm.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsForm.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ADONet\dsForm.xss">
+      <DependentUpon>dsForm.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsMetting.xsc">
+      <DependentUpon>dsMetting.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsMetting.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMetting.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ADONet\dsMetting.xss">
+      <DependentUpon>dsMetting.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsOJT.xsc">
+      <DependentUpon>dsOJT.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsOJT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOJT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ADONet\dsOJT.xss">
+      <DependentUpon>dsOJT.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsSurvey.xsc">
+      <DependentUpon>dsSurvey.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsSurvey.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSurvey.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ADONet\dsSurvey.xss">
+      <DependentUpon>dsSurvey.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsSurveyAT.xsc">
+      <DependentUpon>dsSurveyAT.xsd</DependentUpon>
+    </None>
+    <None Include="ADONet\dsSurveyAT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSurveyAT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ADONet\dsSurveyAT.xss">
+      <DependentUpon>dsSurveyAT.xsd</DependentUpon>
+    </None>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\CrewInfo.vshost.exe.config" />
+    <None Include="bin\Debug\CrewInfo.vshost.exe.manifest" />
+    <None Include="bin\Debug\FlightFinalReport.doc" />
+    <None Include="bin\Debug\VNCR Station.exe.config" />
+    <None Include="bin\Debug\VNCR Station.vshost.exe.config" />
+    <None Include="bin\Debug\VNCR Station.vshost.exe.manifest" />
+    <None Include="ERMSDataSet.xsc">
+      <DependentUpon>ERMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ERMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ERMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ERMSDataSet.xss">
+      <DependentUpon>ERMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SabreLibs\csapi.cfg" />
+    <None Include="SabreLibs\MyCOMuxCSAPI.X.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="COMUXCSAPILib">
+      <Guid>{7C408D80-33CD-11D4-B892-00E02C073A29}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CrewInfo.vshost.exe" />
+    <Content Include="bin\Debug\DeltaCompressionDotNet.dll" />
+    <Content Include="bin\Debug\DeltaCompressionDotNet.MsDelta.dll" />
+    <Content Include="bin\Debug\DeltaCompressionDotNet.PatchApi.dll" />
+    <Content Include="bin\Debug\DevExpress.BonusSkins.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml" />
+    <Content Include="bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v15.2.xml" />
+    <Content Include="bin\Debug\de\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.Extended.dll" />
+    <Content Include="bin\Debug\EntityFramework.Extended.xml" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\ERMs.Data.dll" />
+    <Content Include="bin\Debug\ERMs.Data.pdb" />
+    <Content Include="bin\Debug\ERMs.SharedBase.dll" />
+    <Content Include="bin\Debug\ERMs.SharedBase.pdb" />
+    <Content Include="bin\Debug\ERMs.Sys.dll" />
+    <Content Include="bin\Debug\ERMs.Sys.pdb" />
+    <Content Include="bin\Debug\Erms.Utils.dll" />
+    <Content Include="bin\Debug\Erms.Utils.pdb" />
+    <Content Include="bin\Debug\es\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.xml" />
+    <Content Include="bin\Debug\ja\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\Microsoft.mshtml.dll" />
+    <Content Include="bin\Debug\Mono.Cecil.dll" />
+    <Content Include="bin\Debug\Mono.Cecil.Mdb.dll" />
+    <Content Include="bin\Debug\Mono.Cecil.Pdb.dll" />
+    <Content Include="bin\Debug\Mono.Cecil.Rocks.dll" />
+    <Content Include="bin\Debug\NuGet.Squirrel.dll" />
+    <Content Include="bin\Debug\NuGet.Squirrel.pdb" />
+    <Content Include="bin\Debug\ru\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\Spire.Doc.dll" />
+    <Content Include="bin\Debug\Spire.License.dll" />
+    <Content Include="bin\Debug\Spire.Pdf.dll" />
+    <Content Include="bin\Debug\Splat.dll" />
+    <Content Include="bin\Debug\Splat.pdb" />
+    <Content Include="bin\Debug\Squirrel.dll" />
+    <Content Include="bin\Debug\Squirrel.pdb" />
+    <Content Include="bin\Debug\VNCR Station.exe" />
+    <Content Include="bin\Debug\VNCR Station.pdb" />
+    <Content Include="bin\Debug\VNCR Station.vshost.exe" />
+    <Content Include="Images\icon.png" />
+    <Content Include="Images\icon256.ico" />
+    <Content Include="Images\VNA-Cabincrew.png" />
+    <None Include="Resources\Account.bmp" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\image.png" />
+    <Content Include="SabreLibs\CCSAPI.dll" />
+    <Content Include="SabreLibs\CCSAPICFG.dll" />
+    <Content Include="SabreLibs\CCSAPIDTCTRL.dll" />
+    <Content Include="SabreLibs\CCSAPIHSSP2.dll" />
+    <Content Include="SabreLibs\CCSAPIHSSPDRV.dll" />
+    <Content Include="SabreLibs\CCSAPISABI.dll" />
+    <Content Include="SabreLibs\CCSAPIUTILS.dll" />
+    <Content Include="SabreLibs\CHostSessionList.txt" />
+    <Content Include="SabreLibs\COMuxCSAPI.dll" />
+    <Content Include="SabreLibs\HOSTINFO.TXT" />
+    <Content Include="SabreLibs\Interop.COMUXCSAPILib.dll" />
+    <Content Include="SabreLibs\Sabreapi.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERMs.Data\ERMs.Data.csproj">
+      <Project>{4c6abb29-b8b8-4edb-9b77-284d35f298ad}</Project>
+      <Name>ERMs.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERMs.SharedBase\ERMs.SharedBase.csproj">
+      <Project>{86412c40-5a7d-42c5-b776-895975c3350e}</Project>
+      <Name>ERMs.SharedBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERMs.Sys\ERMs.Sys.csproj">
+      <Project>{368e1e2e-9533-4e65-be9e-e746476ec531}</Project>
+      <Name>ERMs.Sys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Erms.Utils\Erms.Utils.csproj">
+      <Project>{6b456584-b56f-4bad-b6b1-4d277193f4fc}</Project>
+      <Name>Erms.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

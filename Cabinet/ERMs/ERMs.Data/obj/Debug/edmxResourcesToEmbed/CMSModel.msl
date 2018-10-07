@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CMS_DEVModelStoreContainer" CdmEntityContainer="CMSEntities">
+    <EntitySetMapping Name="RecruitmentCandidates">
+      <EntityTypeMapping TypeName="CMS_DEVModel.RecruitmentCandidate">
+        <MappingFragment StoreEntitySet="RecruitmentCandidate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CandidateType" ColumnName="CandidateType" />
+          <ScalarProperty Name="CandidateTypeText" ColumnName="CandidateTypeText" />
+          <ScalarProperty Name="KnowledgeInfoBy" ColumnName="KnowledgeInfoBy" />
+          <ScalarProperty Name="KnowledgeInfoByText" ColumnName="KnowledgeInfoByText" />
+          <ScalarProperty Name="TestPlace" ColumnName="TestPlace" />
+          <ScalarProperty Name="TestPlaceText" ColumnName="TestPlaceText" />
+          <ScalarProperty Name="TestLanguage" ColumnName="TestLanguage" />
+          <ScalarProperty Name="TestLanguageText" ColumnName="TestLanguageText" />
+          <ScalarProperty Name="TestNo" ColumnName="TestNo" />
+          <ScalarProperty Name="TestedPlace" ColumnName="TestedPlace" />
+          <ScalarProperty Name="TestedPlaceText" ColumnName="TestedPlaceText" />
+          <ScalarProperty Name="TestedDate" ColumnName="TestedDate" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="PlaceOfOrigin" ColumnName="PlaceOfOrigin" />
+          <ScalarProperty Name="IdentityOrPassportNo" ColumnName="IdentityOrPassportNo" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="IssuePlace" ColumnName="IssuePlace" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EducationLevel" ColumnName="EducationLevel" />
+          <ScalarProperty Name="EducationLevelText" ColumnName="EducationLevelText" />
+          <ScalarProperty Name="ForeignLanguageLevel" ColumnName="ForeignLanguageLevel" />
+          <ScalarProperty Name="ForeignLanguageLevelText" ColumnName="ForeignLanguageLevelText" />
+          <ScalarProperty Name="ForeignLanguageTestedDate" ColumnName="ForeignLanguageTestedDate" />
+          <ScalarProperty Name="ForeignLanguageTestedPoint" ColumnName="ForeignLanguageTestedPoint" />
+          <ScalarProperty Name="ForeignLanguageOther" ColumnName="ForeignLanguageOther" />
+          <ScalarProperty Name="Gifted" ColumnName="Gifted" />
+          <ScalarProperty Name="PastCompany" ColumnName="PastCompany" />
+          <ScalarProperty Name="AttachmentID" ColumnName="AttachmentID" />
+          <ScalarProperty Name="PrivateKey" ColumnName="PrivateKey" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

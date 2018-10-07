@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ERMS" Class="LinqModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=doantiepvien.com.vn;Initial Catalog=ERMS;Persist Security Info=True;User ID=kerberos" SettingsObjectName="ERMs.Sys.Properties.Settings" SettingsPropertyName="ERMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Sys_Account" Member="Sys_Accounts">
+    <Type Name="Sys_Account">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code_tv" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="name_tv" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="man" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noisinh" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="quoctich" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pag_no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pport_no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="noicap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="course" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="main_base" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="from_place" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="start_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="end_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="home" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="type_tv" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="term_tv" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="class_tv" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ann" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lg" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="on_plan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="on_route" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="vip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="knbgoc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="kn_khac" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="baclg" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayve" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ttut" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ma_tt" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fly_time" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int_time" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="duty_time" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sochbay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dubi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="night" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lc" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="IsCrew" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Account" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CrewID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FirstNameVn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastNameVn" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ImageBase64" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Token" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Creator" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Modifier" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Creatorid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modifierid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PPort_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InfoConfirmed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TokenExpired" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Ogranization" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

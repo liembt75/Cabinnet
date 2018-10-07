@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMS_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="RecruitmentCandidate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CandidateType" Type="Int32" />
+    <Property Name="CandidateTypeText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KnowledgeInfoBy" Type="Int32" />
+    <Property Name="KnowledgeInfoByText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TestPlace" Type="Int32" />
+    <Property Name="TestPlaceText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TestLanguage" Type="Int32" />
+    <Property Name="TestLanguageText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TestNo" Type="Int32" />
+    <Property Name="TestedPlace" Type="Int32" />
+    <Property Name="TestedPlaceText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TestedDate" Type="DateTime" Precision="3" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="Boolean" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="PlaceOfOrigin" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IdentityOrPassportNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IssueDate" Type="DateTime" Precision="3" />
+    <Property Name="IssuePlace" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EducationLevel" Type="Int32" />
+    <Property Name="EducationLevelText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ForeignLanguageLevel" Type="Int32" />
+    <Property Name="ForeignLanguageLevelText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ForeignLanguageTestedDate" Type="DateTime" Precision="3" />
+    <Property Name="ForeignLanguageTestedPoint" Type="Double" />
+    <Property Name="ForeignLanguageOther" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Gifted" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PastCompany" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AttachmentID" Type="Int32" />
+    <Property Name="PrivateKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="Creator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="Modifier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RecruitmentCandidates" EntityType="Self.RecruitmentCandidate" />
+  </EntityContainer>
+</Schema>

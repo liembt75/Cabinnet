@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VietnamRedantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VietnamRedant.dbo.PView_giadinh1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PView_giadinh1">
+    <Key>
+      <PropertyRef Name="mans" />
+      <PropertyRef Name="loains" />
+      <PropertyRef Name="loainhansu" />
+      <PropertyRef Name="ngaysinh" />
+      <PropertyRef Name="bophanlamviec" />
+      <PropertyRef Name="bophan" />
+    </Key>
+    <Property Name="mans" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="loains" Type="int" Nullable="false" />
+    <Property Name="loainhansu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="loaiquanhe" Type="int" />
+    <Property Name="quanhe" Type="nvarchar" MaxLength="50" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="65" />
+    <Property Name="ngaysinh" Type="smalldatetime" Nullable="false" />
+    <Property Name="cmnd_so" Type="nvarchar" MaxLength="20" />
+    <Property Name="bophanlamviec" Type="int" Nullable="false" />
+    <Property Name="bophan" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="bienche_ngay" Type="smalldatetime" />
+    <Property Name="bienche_tct" Type="smalldatetime" />
+    <Property Name="bienche_dtv" Type="smalldatetime" />
+    <Property Name="nghiviec" Type="bit" />
+    <Property Name="giadinhid" Type="int" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="VietnamRedantModelStoreContainer">
+    <EntitySet Name="PView_giadinh1" EntityType="Self.PView_giadinh1" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PView_giadinh1].[mans] AS [mans], 
+    [PView_giadinh1].[loains] AS [loains], 
+    [PView_giadinh1].[loainhansu] AS [loainhansu], 
+    [PView_giadinh1].[loaiquanhe] AS [loaiquanhe], 
+    [PView_giadinh1].[quanhe] AS [quanhe], 
+    [PView_giadinh1].[hoten] AS [hoten], 
+    [PView_giadinh1].[ngaysinh] AS [ngaysinh], 
+    [PView_giadinh1].[cmnd_so] AS [cmnd_so], 
+    [PView_giadinh1].[bophanlamviec] AS [bophanlamviec], 
+    [PView_giadinh1].[bophan] AS [bophan], 
+    [PView_giadinh1].[bienche_ngay] AS [bienche_ngay], 
+    [PView_giadinh1].[bienche_tct] AS [bienche_tct], 
+    [PView_giadinh1].[bienche_dtv] AS [bienche_dtv], 
+    [PView_giadinh1].[nghiviec] AS [nghiviec], 
+    [PView_giadinh1].[giadinhid] AS [giadinhid], 
+    [PView_giadinh1].[Firstname] AS [Firstname]
+    FROM [dbo].[PView_giadinh1] AS [PView_giadinh1]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

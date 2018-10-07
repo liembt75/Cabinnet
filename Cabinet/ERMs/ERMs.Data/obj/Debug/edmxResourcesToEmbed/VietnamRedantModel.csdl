@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VietnamRedantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PView_giadinh1">
+    <Key>
+      <PropertyRef Name="mans" />
+      <PropertyRef Name="loains" />
+      <PropertyRef Name="loainhansu" />
+      <PropertyRef Name="ngaysinh" />
+      <PropertyRef Name="bophanlamviec" />
+      <PropertyRef Name="bophan" />
+    </Key>
+    <Property Name="mans" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="loains" Type="Int32" Nullable="false" />
+    <Property Name="loainhansu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="loaiquanhe" Type="Int32" />
+    <Property Name="quanhe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hoten" Type="String" MaxLength="65" FixedLength="false" Unicode="true" />
+    <Property Name="ngaysinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="cmnd_so" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="bophanlamviec" Type="Int32" Nullable="false" />
+    <Property Name="bophan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="bienche_ngay" Type="DateTime" Precision="0" />
+    <Property Name="bienche_tct" Type="DateTime" Precision="0" />
+    <Property Name="bienche_dtv" Type="DateTime" Precision="0" />
+    <Property Name="nghiviec" Type="Boolean" />
+    <Property Name="giadinhid" Type="Int32" />
+    <Property Name="Firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="VietnamRedantEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PView_giadinh1" EntityType="Self.PView_giadinh1" />
+  </EntityContainer>
+</Schema>

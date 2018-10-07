@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERMSModelStoreContainer" CdmEntityContainer="ERMSEntities">
+    <EntitySetMapping Name="CR_Dbf_lbmb">
+      <EntityTypeMapping TypeName="ERMSModel.CR_Dbf_lbmb">
+        <MappingFragment StoreEntitySet="CR_Dbf_lbmb">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Codefly" ColumnName="Codefly" />
+          <ScalarProperty Name="CodeApl" ColumnName="CodeApl" />
+          <ScalarProperty Name="TypeApl" ColumnName="TypeApl" />
+          <ScalarProperty Name="Acf" ColumnName="Acf" />
+          <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+          <ScalarProperty Name="Leg" ColumnName="Leg" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="AcfNo" ColumnName="AcfNo" />
+          <ScalarProperty Name="Cfg" ColumnName="Cfg" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Base" ColumnName="Base" />
+          <ScalarProperty Name="UserNane" ColumnName="UserNane" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+          <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+          <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CR_FlightInfo">
+      <EntityTypeMapping TypeName="ERMSModel.CR_FlightInfo">
+        <MappingFragment StoreEntitySet="CR_FlightInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+          <ScalarProperty Name="Routing" ColumnName="Routing" />
+          <ScalarProperty Name="Aircraft" ColumnName="Aircraft" />
+          <ScalarProperty Name="RegisterNo" ColumnName="RegisterNo" />
+          <ScalarProperty Name="UTC" ColumnName="UTC" />
+          <ScalarProperty Name="Departed" ColumnName="Departed" />
+          <ScalarProperty Name="Arrived" ColumnName="Arrived" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="TypeApl" ColumnName="TypeApl" />
+          <ScalarProperty Name="Acf" ColumnName="Acf" />
+          <ScalarProperty Name="AcfNo" ColumnName="AcfNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Carry" ColumnName="Carry" />
+          <ScalarProperty Name="PaxC" ColumnName="PaxC" />
+          <ScalarProperty Name="PaxI" ColumnName="PaxI" />
+          <ScalarProperty Name="PaxY" ColumnName="PaxY" />
+          <ScalarProperty Name="VIP" ColumnName="VIP" />
+          <ScalarProperty Name="CIP" ColumnName="CIP" />
+          <ScalarProperty Name="PaxBooking" ColumnName="PaxBooking" />
+          <ScalarProperty Name="PaxClosed" ColumnName="PaxClosed" />
+          <ScalarProperty Name="Wchr" ColumnName="Wchr" />
+          <ScalarProperty Name="SM" ColumnName="SM" />
+          <ScalarProperty Name="BSCT" ColumnName="BSCT" />
+          <ScalarProperty Name="INF" ColumnName="INF" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="BLND" ColumnName="BLND" />
+          <ScalarProperty Name="DEAF" ColumnName="DEAF" />
+          <ScalarProperty Name="STCR" ColumnName="STCR" />
+          <ScalarProperty Name="EXST" ColumnName="EXST" />
+          <ScalarProperty Name="DEPU" ColumnName="DEPU" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+          <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+          <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ER_Employee">
+      <EntityTypeMapping TypeName="ERMSModel.ER_Employee">
+        <MappingFragment StoreEntitySet="ER_Employee">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code_tv" ColumnName="Code_tv" />
+          <ScalarProperty Name="name_tv" ColumnName="name_tv" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="man" ColumnName="man" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="noisinh" ColumnName="noisinh" />
+          <ScalarProperty Name="quoctich" ColumnName="quoctich" />
+          <ScalarProperty Name="pag_no" ColumnName="pag_no" />
+          <ScalarProperty Name="pport_no" ColumnName="pport_no" />
+          <ScalarProperty Name="noicap" ColumnName="noicap" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="course" ColumnName="course" />
+          <ScalarProperty Name="main_base" ColumnName="main_base" />
+          <ScalarProperty Name="from_place" ColumnName="from_place" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="home" ColumnName="home" />
+          <ScalarProperty Name="type_tv" ColumnName="type_tv" />
+          <ScalarProperty Name="term_tv" ColumnName="term_tv" />
+          <ScalarProperty Name="class_tv" ColumnName="class_tv" />
+          <ScalarProperty Name="ann" ColumnName="ann" />
+          <ScalarProperty Name="lg" ColumnName="lg" />
+          <ScalarProperty Name="on_plan" ColumnName="on_plan" />
+          <ScalarProperty Name="on_route" ColumnName="on_route" />
+          <ScalarProperty Name="vip" ColumnName="vip" />
+          <ScalarProperty Name="knbgoc" ColumnName="knbgoc" />
+          <ScalarProperty Name="kn_khac" ColumnName="kn_khac" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="baclg" ColumnName="baclg" />
+          <ScalarProperty Name="ngaynhan" ColumnName="ngaynhan" />
+          <ScalarProperty Name="ngayve" ColumnName="ngayve" />
+          <ScalarProperty Name="ttut" ColumnName="ttut" />
+          <ScalarProperty Name="ma_tt" ColumnName="ma_tt" />
+          <ScalarProperty Name="fly_time" ColumnName="fly_time" />
+          <ScalarProperty Name="int_time" ColumnName="int_time" />
+          <ScalarProperty Name="duty_time" ColumnName="duty_time" />
+          <ScalarProperty Name="sochbay" ColumnName="sochbay" />
+          <ScalarProperty Name="dubi" ColumnName="dubi" />
+          <ScalarProperty Name="night" ColumnName="night" />
+          <ScalarProperty Name="lc" ColumnName="lc" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+          <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+          <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_SabreLoader">
+      <EntityTypeMapping TypeName="ERMSModel.Sys_SabreLoader">
+        <MappingFragment StoreEntitySet="Sys_SabreLoader">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FlightId" ColumnName="FlightId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+          <ScalarProperty Name="Routing" ColumnName="Routing" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Request" ColumnName="Request" />
+          <ScalarProperty Name="Response" ColumnName="Response" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+          <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

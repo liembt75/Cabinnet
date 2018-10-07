@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VietnamRedantModelStoreContainer" CdmEntityContainer="VietnamRedantEntities">
+    <EntitySetMapping Name="PView_giadinh1">
+      <EntityTypeMapping TypeName="VietnamRedantModel.PView_giadinh1">
+        <MappingFragment StoreEntitySet="PView_giadinh1">
+          <ScalarProperty Name="mans" ColumnName="mans" />
+          <ScalarProperty Name="loains" ColumnName="loains" />
+          <ScalarProperty Name="loainhansu" ColumnName="loainhansu" />
+          <ScalarProperty Name="loaiquanhe" ColumnName="loaiquanhe" />
+          <ScalarProperty Name="quanhe" ColumnName="quanhe" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="cmnd_so" ColumnName="cmnd_so" />
+          <ScalarProperty Name="bophanlamviec" ColumnName="bophanlamviec" />
+          <ScalarProperty Name="bophan" ColumnName="bophan" />
+          <ScalarProperty Name="bienche_ngay" ColumnName="bienche_ngay" />
+          <ScalarProperty Name="bienche_tct" ColumnName="bienche_tct" />
+          <ScalarProperty Name="bienche_dtv" ColumnName="bienche_dtv" />
+          <ScalarProperty Name="nghiviec" ColumnName="nghiviec" />
+          <ScalarProperty Name="giadinhid" ColumnName="giadinhid" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

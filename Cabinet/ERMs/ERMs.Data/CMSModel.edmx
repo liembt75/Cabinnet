@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CMS_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="RecruitmentCandidate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CandidateType" Type="int" />
+          <Property Name="CandidateTypeText" Type="nvarchar" MaxLength="100" />
+          <Property Name="KnowledgeInfoBy" Type="int" />
+          <Property Name="KnowledgeInfoByText" Type="nvarchar" MaxLength="100" />
+          <Property Name="TestPlace" Type="int" />
+          <Property Name="TestPlaceText" Type="nvarchar" MaxLength="100" />
+          <Property Name="TestLanguage" Type="int" />
+          <Property Name="TestLanguageText" Type="nvarchar" MaxLength="100" />
+          <Property Name="TestNo" Type="int" />
+          <Property Name="TestedPlace" Type="int" />
+          <Property Name="TestedPlaceText" Type="nvarchar" MaxLength="100" />
+          <Property Name="TestedDate" Type="datetime" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="PlaceOfOrigin" Type="nvarchar" MaxLength="200" />
+          <Property Name="IdentityOrPassportNo" Type="varchar" MaxLength="20" />
+          <Property Name="IssueDate" Type="datetime" />
+          <Property Name="IssuePlace" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone1" Type="varchar" MaxLength="15" />
+          <Property Name="Phone2" Type="varchar" MaxLength="15" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="EducationLevel" Type="int" />
+          <Property Name="EducationLevelText" Type="nvarchar" MaxLength="100" />
+          <Property Name="ForeignLanguageLevel" Type="int" />
+          <Property Name="ForeignLanguageLevelText" Type="nvarchar" MaxLength="100" />
+          <Property Name="ForeignLanguageTestedDate" Type="datetime" />
+          <Property Name="ForeignLanguageTestedPoint" Type="float" />
+          <Property Name="ForeignLanguageOther" Type="varchar" MaxLength="30" />
+          <Property Name="Gifted" Type="nvarchar" MaxLength="200" />
+          <Property Name="PastCompany" Type="nvarchar" MaxLength="200" />
+          <Property Name="AttachmentID" Type="int" />
+          <Property Name="PrivateKey" Type="varchar" MaxLength="50" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="50" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="CMS_DEVModelStoreContainer">
+          <EntitySet Name="RecruitmentCandidate" EntityType="Self.RecruitmentCandidate" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CMS_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="RecruitmentCandidate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CandidateType" Type="Int32" />
+          <Property Name="CandidateTypeText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="KnowledgeInfoBy" Type="Int32" />
+          <Property Name="KnowledgeInfoByText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TestPlace" Type="Int32" />
+          <Property Name="TestPlaceText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TestLanguage" Type="Int32" />
+          <Property Name="TestLanguageText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TestNo" Type="Int32" />
+          <Property Name="TestedPlace" Type="Int32" />
+          <Property Name="TestedPlaceText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TestedDate" Type="DateTime" Precision="3" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Boolean" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="PlaceOfOrigin" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IdentityOrPassportNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IssueDate" Type="DateTime" Precision="3" />
+          <Property Name="IssuePlace" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Phone2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EducationLevel" Type="Int32" />
+          <Property Name="EducationLevelText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ForeignLanguageLevel" Type="Int32" />
+          <Property Name="ForeignLanguageLevelText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ForeignLanguageTestedDate" Type="DateTime" Precision="3" />
+          <Property Name="ForeignLanguageTestedPoint" Type="Double" />
+          <Property Name="ForeignLanguageOther" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Gifted" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PastCompany" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AttachmentID" Type="Int32" />
+          <Property Name="PrivateKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="Modifier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RecruitmentCandidates" EntityType="Self.RecruitmentCandidate" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CMS_DEVModelStoreContainer" CdmEntityContainer="CMSEntities">
+          <EntitySetMapping Name="RecruitmentCandidates">
+            <EntityTypeMapping TypeName="CMS_DEVModel.RecruitmentCandidate">
+              <MappingFragment StoreEntitySet="RecruitmentCandidate">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CandidateType" ColumnName="CandidateType" />
+                <ScalarProperty Name="CandidateTypeText" ColumnName="CandidateTypeText" />
+                <ScalarProperty Name="KnowledgeInfoBy" ColumnName="KnowledgeInfoBy" />
+                <ScalarProperty Name="KnowledgeInfoByText" ColumnName="KnowledgeInfoByText" />
+                <ScalarProperty Name="TestPlace" ColumnName="TestPlace" />
+                <ScalarProperty Name="TestPlaceText" ColumnName="TestPlaceText" />
+                <ScalarProperty Name="TestLanguage" ColumnName="TestLanguage" />
+                <ScalarProperty Name="TestLanguageText" ColumnName="TestLanguageText" />
+                <ScalarProperty Name="TestNo" ColumnName="TestNo" />
+                <ScalarProperty Name="TestedPlace" ColumnName="TestedPlace" />
+                <ScalarProperty Name="TestedPlaceText" ColumnName="TestedPlaceText" />
+                <ScalarProperty Name="TestedDate" ColumnName="TestedDate" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="PlaceOfOrigin" ColumnName="PlaceOfOrigin" />
+                <ScalarProperty Name="IdentityOrPassportNo" ColumnName="IdentityOrPassportNo" />
+                <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+                <ScalarProperty Name="IssuePlace" ColumnName="IssuePlace" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EducationLevel" ColumnName="EducationLevel" />
+                <ScalarProperty Name="EducationLevelText" ColumnName="EducationLevelText" />
+                <ScalarProperty Name="ForeignLanguageLevel" ColumnName="ForeignLanguageLevel" />
+                <ScalarProperty Name="ForeignLanguageLevelText" ColumnName="ForeignLanguageLevelText" />
+                <ScalarProperty Name="ForeignLanguageTestedDate" ColumnName="ForeignLanguageTestedDate" />
+                <ScalarProperty Name="ForeignLanguageTestedPoint" ColumnName="ForeignLanguageTestedPoint" />
+                <ScalarProperty Name="ForeignLanguageOther" ColumnName="ForeignLanguageOther" />
+                <ScalarProperty Name="Gifted" ColumnName="Gifted" />
+                <ScalarProperty Name="PastCompany" ColumnName="PastCompany" />
+                <ScalarProperty Name="AttachmentID" ColumnName="AttachmentID" />
+                <ScalarProperty Name="PrivateKey" ColumnName="PrivateKey" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

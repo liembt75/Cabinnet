@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ERMS" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=doantiepvien.com.vn;Initial Catalog=ERMS;Persist Security Info=True;User ID=kerberos" SettingsObjectName="ConsoleApplication1.Properties.Settings" SettingsPropertyName="ERMSConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ER_Support" Member="ER_Supports">
+    <Type Name="ER_Support">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Assignee" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AssigneeName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="AttachmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Star" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Creatorid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Creator" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modifierid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Modifier" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

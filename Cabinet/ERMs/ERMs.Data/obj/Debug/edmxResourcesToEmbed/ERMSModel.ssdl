@@ -1,0 +1,2104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BR_BriefingDiary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="datetime" Nullable="false" />
+    <Property Name="manv" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ten" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="bophan" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="chuyenbay" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="noidung" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="hinhthuc" Type="int" Nullable="false" />
+    <Property Name="hinhthuc1" Type="nchar" MaxLength="1" />
+    <Property Name="hinhthuc2" Type="nchar" MaxLength="1" />
+    <Property Name="hinhthuc3" Type="nchar" MaxLength="1" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Base" Type="nvarchar" MaxLength="10" />
+    <Property Name="hinhthuc4" Type="nchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="CR_Airplane_Crew">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Prior" Type="int" />
+    <Property Name="Aircraft" Type="varchar" MaxLength="50" />
+    <Property Name="Routing" Type="varchar" MaxLength="1000" />
+    <Property Name="P" Type="int" />
+    <Property Name="X" Type="int" />
+    <Property Name="B" Type="int" />
+    <Property Name="Y" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Expired" Type="datetime" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_Crew_Task_Update_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlightID" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_Flight_Assessment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlightID" Type="int" />
+    <Property Name="CrewID" Type="varchar" MaxLength="10" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CrewID1" Type="varchar" MaxLength="10" />
+    <Property Name="FullName1" Type="nvarchar" MaxLength="100" />
+    <Property Name="LessonID" Type="int" />
+    <Property Name="Lesson" Type="nvarchar" MaxLength="250" />
+    <Property Name="TotalScore" Type="float" />
+    <Property Name="Strength" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Weakness" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="CR_Flight_Assessment_Items">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlightAssessmentID" Type="int" />
+    <Property Name="QuestionID" Type="int" />
+    <Property Name="Question" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Factor" Type="int" />
+    <Property Name="Score" Type="int" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="CR_Flight_Crew">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TripID" Type="int" />
+    <Property Name="FlightID" Type="int" />
+    <Property Name="CrewID" Type="varchar" MaxLength="10" />
+    <Property Name="FO_FlightNo" Type="varchar" MaxLength="10" />
+    <Property Name="FO_Date" Type="datetime" />
+    <Property Name="FO_Job" Type="varchar" MaxLength="10" />
+    <Property Name="FO_From_Place" Type="varchar" MaxLength="5" />
+    <Property Name="FO_End_Place" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Start_Time" Type="datetime" />
+    <Property Name="FO_End_Time" Type="datetime" />
+    <Property Name="FO_Time_For" Type="real" />
+    <Property Name="FO_Time_Min" Type="real" />
+    <Property Name="FO_Time_Off" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Fly_Time" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Int_Time" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Duty_Time" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Cfg" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Cham" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Night" Type="int" />
+    <Property Name="FO_Off_Split" Type="char" MaxLength="5" />
+    <Property Name="FO_Rpt" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Rptime" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Eod" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Ch" Type="int" />
+    <Property Name="FO_Loai" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Ticket" Type="varchar" MaxLength="50" />
+    <Property Name="FO_Status" Type="varchar" MaxLength="5" />
+    <Property Name="FO_Note" Type="nvarchar" MaxLength="100" />
+    <Property Name="FO_Ma_DV" Type="varchar" MaxLength="5" />
+    <Property Name="FO_User" Type="varchar" MaxLength="100" />
+    <Property Name="FO_Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="FO_Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Job" Type="varchar" MaxLength="10" />
+    <Property Name="CA" Type="varchar" MaxLength="10" />
+    <Property Name="ANN" Type="varchar" MaxLength="10" />
+    <Property Name="DutyFree" Type="nvarchar" MaxLength="50" />
+    <Property Name="Training" Type="varchar" MaxLength="10" />
+    <Property Name="VIP" Type="varchar" MaxLength="10" />
+    <Property Name="Other" Type="varchar" MaxLength="10" />
+    <Property Name="CrewName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CodeFly" Type="varchar" MaxLength="20" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+    <Property Name="Ability" Type="varchar" MaxLength="10" />
+    <Property Name="Authority" Type="int" />
+  </EntityType>
+  <EntityType Name="CR_Flight_Dutyfree">
+    <Key>
+      <PropertyRef Name="FlightID" />
+    </Key>
+    <Property Name="FlightID" Type="int" Nullable="false" />
+    <Property Name="Qly" Type="int" Nullable="false" />
+    <Property Name="RealQly" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Total" Type="float" />
+    <Property Name="KPTinfo" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_Flight_FinalReport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlightID" Type="int" />
+    <Property Name="FlightInfo" Type="varchar" MaxLength="50" />
+    <Property Name="CrewID" Type="varchar" MaxLength="10" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MainPilot" Type="nvarchar" MaxLength="100" />
+    <Property Name="SecondPilot" Type="nvarchar" MaxLength="100" />
+    <Property Name="Emergency" Type="int" />
+    <Property Name="Category" Type="nvarchar" MaxLength="100" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Attachments" Type="int" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+    <Property Name="ReportStatus" Type="int" />
+    <Property Name="Replierid" Type="varchar" MaxLength="10" />
+    <Property Name="Replier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Replied" Type="datetime" />
+    <Property Name="ReplyDept" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReplyInfo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CR_Flight_FinalReport_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="100" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="CR_Flight_FinalReport_Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FinalReportID" Type="int" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ReplyInfo" Type="nvarchar(max)" />
+    <Property Name="Replierid" Type="int" />
+    <Property Name="Replier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Replied" Type="datetime" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="CR_Flight_FinalReport_Replied_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FinalReportID" Type="int" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="100" />
+    <Property Name="Emergency" Type="int" />
+    <Property Name="Replierid" Type="varchar" MaxLength="10" />
+    <Property Name="Replier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Replied" Type="datetime" />
+    <Property Name="ReplyInfo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CR_Flight_FinalReport_SubCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="SubCategory" Type="nvarchar" MaxLength="100" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="CR_FlightInfo">
+    <Key>
+      <PropertyRef Name="FlightID" />
+    </Key>
+    <Property Name="FlightID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="FlightNo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Routing" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Aircraft" Type="varchar" MaxLength="10" />
+    <Property Name="RegisterNo" Type="varchar" MaxLength="10" />
+    <Property Name="UTC" Type="datetime" />
+    <Property Name="Departed" Type="datetime" />
+    <Property Name="Arrived" Type="datetime" />
+    <Property Name="Parking" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeApl" Type="varchar" MaxLength="10" />
+    <Property Name="Acf" Type="varchar" MaxLength="10" />
+    <Property Name="AcfNo" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="varchar" MaxLength="10" />
+    <Property Name="Note" Type="nvarchar" MaxLength="400" />
+    <Property Name="VipRemark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SpecialInfo" Type="nvarchar" MaxLength="200" />
+    <Property Name="Carry" Type="varchar" MaxLength="10" />
+    <Property Name="Capacity" Type="int" />
+    <Property Name="Classify" Type="varchar" MaxLength="50" />
+    <Property Name="PaxRemark" Type="varchar" MaxLength="100" />
+    <Property Name="TotalPax" Type="int" />
+    <Property Name="TotalPaxC" Type="int" />
+    <Property Name="TotalPaxI" Type="int" />
+    <Property Name="TotalPaxY" Type="int" />
+    <Property Name="CkinC" Type="int" />
+    <Property Name="CkinI" Type="int" />
+    <Property Name="CkinY" Type="int" />
+    <Property Name="TotalPaxCKI" Type="int" />
+    <Property Name="TotalVIP" Type="int" />
+    <Property Name="TotalCIP" Type="int" />
+    <Property Name="TotalWchr" Type="int" />
+    <Property Name="TotalSM" Type="int" />
+    <Property Name="TotalBSCT" Type="int" />
+    <Property Name="TotalINF" Type="int" />
+    <Property Name="TotalUM" Type="int" />
+    <Property Name="TotalBLND" Type="int" />
+    <Property Name="TotalDEAF" Type="int" />
+    <Property Name="TotalSTCR" Type="int" />
+    <Property Name="TotalEXST" Type="int" />
+    <Property Name="TotalDEPU" Type="int" />
+    <Property Name="Version" Type="int" />
+    <Property Name="isLocked" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+    <Property Name="CrewTaskStatus" Type="int" />
+    <Property Name="FlightReportStatus" Type="int" />
+    <Property Name="AssessmentStatus" Type="int" />
+    <Property Name="OJTStatus" Type="int" />
+    <Property Name="Purserid" Type="varchar" MaxLength="10" />
+    <Property Name="PurserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PurserDate" Type="datetime" />
+    <Property Name="FORequest" Type="bit" />
+    <Property Name="FORequested" Type="datetime" />
+    <Property Name="FOApplied" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CR_FlightInfo_Netline">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UTCDate" Type="date" />
+    <Property Name="UTCDepart" Type="datetime" />
+    <Property Name="UTCArrive" Type="datetime" />
+    <Property Name="AC" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGAC" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLT_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="STA" Type="nvarchar" MaxLength="50" />
+    <Property Name="STATUS" Type="varchar" MaxLength="3" />
+    <Property Name="E_DATE" Type="datetime" />
+    <Property Name="SANBAYDI" Type="varchar" MaxLength="3" />
+    <Property Name="SANBAYDEN" Type="varchar" MaxLength="3" />
+    <Property Name="THOIGIANDI" Type="nvarchar" MaxLength="50" />
+    <Property Name="THOIGIANDEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="E_SECTOR_SCHEDULE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ETD" Type="nvarchar" MaxLength="50" />
+    <Property Name="ETA" Type="nvarchar" MaxLength="50" />
+    <Property Name="E_TIME" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="E_SECTOR_ACTUAL" Type="nvarchar" MaxLength="50" />
+    <Property Name="ATD" Type="nvarchar" MaxLength="50" />
+    <Property Name="ATA" Type="nvarchar" MaxLength="50" />
+    <Property Name="A_TIME" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="CHAM_TIME" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DLCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LEG_NO" Type="int" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Refflightid" Type="int" />
+    <Property Name="Auto" Type="bit" />
+  </EntityType>
+  <EntityType Name="CR_OJT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlightID" Type="int" />
+    <Property Name="FltInfo" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ExaminerID" Type="varchar" MaxLength="10" />
+    <Property Name="ExaminerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ExamineeID" Type="varchar" MaxLength="10" />
+    <Property Name="ExamineeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="CR_OJT_Lesson_ID" Type="int" />
+    <Property Name="CR_OJT_Lesson" Type="nvarchar" MaxLength="250" />
+    <Property Name="CR_OJT_Category" Type="nvarchar" MaxLength="250" />
+    <Property Name="TotalScore" Type="float" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Suggestion" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Signed" Type="datetime" />
+    <Property Name="SignedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_OJT_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Signature" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_OJT_Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CR_OJT_ID" Type="int" />
+    <Property Name="SN" Type="int" Nullable="false" />
+    <Property Name="Input" Type="bit" />
+    <Property Name="Question" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Factor" Type="int" />
+    <Property Name="Score" Type="varchar" MaxLength="5" />
+    <Property Name="ScoreValue" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="TextColor" Type="varchar" MaxLength="10" />
+    <Property Name="ScoreType" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_OJT_Lesson">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CR_OJT_Category_ID" Type="int" />
+    <Property Name="Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Signature" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_OJT_Lesson_Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CR_OJT_Lesson_ID" Type="int" />
+    <Property Name="SN" Type="int" Nullable="false" />
+    <Property Name="index" Type="varchar" MaxLength="100" />
+    <Property Name="input" Type="bit" />
+    <Property Name="Question" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Factor" Type="int" />
+    <Property Name="TextColor" Type="varchar" MaxLength="10" />
+    <Property Name="ScoreType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Version" Type="int" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_Survey">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" />
+    <Property Name="FlightID" Type="int" />
+    <Property Name="FltInfo" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CID" Type="varchar" MaxLength="10" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SurveyBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="SeatNo" Type="varchar" MaxLength="10" />
+    <Property Name="PurserID" Type="varchar" MaxLength="10" />
+    <Property Name="PurserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LeaderID" Type="varchar" MaxLength="10" />
+    <Property Name="LeaderName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CR_Survey_Category_ID" Type="int" />
+    <Property Name="CR_Survey_Category" Type="nvarchar" MaxLength="250" />
+    <Property Name="TotalScore" Type="float" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Suggestion" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Signed" Type="datetime" />
+    <Property Name="SignedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_Survey_Banking_Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CR_Survey_Category_ID" Type="int" />
+    <Property Name="SN" Type="int" Nullable="false" />
+    <Property Name="index" Type="varchar" MaxLength="100" />
+    <Property Name="input" Type="bit" />
+    <Property Name="Question" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Factor" Type="int" />
+    <Property Name="TextColor" Type="varchar" MaxLength="10" />
+    <Property Name="ScoreType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Version" Type="int" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_Survey_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Signature" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_Survey_Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CR_Survey_ID" Type="int" />
+    <Property Name="SN" Type="int" Nullable="false" />
+    <Property Name="Input" Type="bit" />
+    <Property Name="Question" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Factor" Type="int" />
+    <Property Name="Score" Type="varchar" MaxLength="5" />
+    <Property Name="ScoreValue" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="TextColor" Type="varchar" MaxLength="10" />
+    <Property Name="ScoreType" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_Trip">
+    <Key>
+      <PropertyRef Name="TripID" />
+    </Key>
+    <Property Name="TripID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TripName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Routing" Type="nvarchar" MaxLength="50" />
+    <Property Name="Group" Type="varchar" MaxLength="10" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="Startdate" Type="datetime" />
+    <Property Name="Finishdate" Type="datetime" />
+    <Property Name="Status" Type="char" MaxLength="2" />
+    <Property Name="CodeFly" Type="varchar" MaxLength="20" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EM_Message">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="Source" Type="nvarchar" MaxLength="10" />
+    <Property Name="SenderID" Type="nvarchar" MaxLength="10" />
+    <Property Name="Sender" Type="nvarchar" MaxLength="50" />
+    <Property Name="Powerby" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceiverID" Type="nvarchar" MaxLength="10" />
+    <Property Name="Receiver" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="Group" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Attachments" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Read" Type="bit" />
+    <Property Name="Readtime" Type="datetime" />
+    <Property Name="Notify" Type="bit" Nullable="false" />
+    <Property Name="NotifyDate" Type="datetime" />
+    <Property Name="Players" Type="varchar" MaxLength="1000" />
+    <Property Name="NoticeTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="isHtml" Type="bit" Nullable="false" />
+    <Property Name="Newsid" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Creatorid" Type="nvarchar" MaxLength="50" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Modifierid" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="OutboxNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="SmsType" Type="nvarchar" MaxLength="15" />
+    <Property Name="SmsContent" Type="nvarchar" MaxLength="320" />
+    <Property Name="SmsTimeOut" Type="datetime" />
+    <Property Name="ResultOut" Type="nvarchar" MaxLength="50" />
+    <Property Name="SmsServerTime" Type="datetime" />
+    <Property Name="SmsDeliveredTime" Type="datetime" />
+    <Property Name="SmsCenterTime" Type="datetime" />
+    <Property Name="SmsDelete" Type="bit" />
+    <Property Name="ReportStatus" Type="bit" />
+    <Property Name="sSender" Type="nvarchar" MaxLength="50" />
+    <Property Name="sReader" Type="nvarchar" MaxLength="50" />
+    <Property Name="dReadAt" Type="datetime" />
+    <Property Name="bReplied" Type="bit" />
+    <Property Name="sDeletedUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="dDeletedDate" Type="datetime" />
+    <Property Name="Priority" Type="int" />
+    <Property Name="SendtoSMS" Type="bit" />
+  </EntityType>
+  <EntityType Name="EM_News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="int" />
+    <Property Name="NID" Type="int" />
+    <Property Name="Mid" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Html" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ER_Support">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="Sender" Type="nvarchar" MaxLength="50" />
+    <Property Name="Assignee" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssigneeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar" MaxLength="4000" />
+    <Property Name="AttachmentId" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rating" Type="smallint" />
+    <Property Name="Star" Type="smallint" />
+    <Property Name="Status" Type="smallint" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Creatorid" Type="nvarchar" MaxLength="50" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Modifierid" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="EX_Attachment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupID" Type="int" Nullable="false" />
+    <Property Name="FileNameReal" Type="nvarchar" MaxLength="200" />
+    <Property Name="FileNameAlias" Type="nvarchar" MaxLength="50" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="300" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="Exam_Banking_Answer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionID" Type="int" Nullable="false" />
+    <Property Name="Answer" Type="nvarchar" MaxLength="1000" />
+    <Property Name="isCorrect" Type="bit" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Exam_Banking_Question">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionType" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="20" />
+    <Property Name="Question" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CrewType" Type="varchar" MaxLength="50" />
+    <Property Name="Aircraft" Type="varchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Exam_Banking_Testing">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="20" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="Duration" Type="int" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="ScoreExpec" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Exam_Banking_Testing_Section">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankTest_ID" Type="int" Nullable="false" />
+    <Property Name="QuestionBankType" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Exam_Question">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExamTester_ID" Type="int" Nullable="false" />
+    <Property Name="BQID" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="20" />
+    <Property Name="Question" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Exam_QuestionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Creatorid" Type="nvarchar" MaxLength="20" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifierid" Type="nvarchar" MaxLength="20" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Exam_Tester">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Crewid" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Flightid" Type="int" />
+    <Property Name="BankTest_ID" Type="int" Nullable="false" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="20" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="Duration" Type="int" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="ScoreExpec" Type="int" />
+    <Property Name="ScoreResult" Type="int" />
+    <Property Name="TestDate" Type="datetime" />
+    <Property Name="FinishDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Examinee_Banking">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="BankTest_ID" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="HR_Department_Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="Isdeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="50" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="20" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HR_Form_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_Forms">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CID" Type="varchar" MaxLength="10" />
+    <Property Name="CName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Category_ID" Type="int" />
+    <Property Name="From_Date" Type="datetime" />
+    <Property Name="To_Date" Type="datetime" />
+    <Property Name="Route" Type="varchar" MaxLength="100" />
+    <Property Name="FlightNo" Type="varchar" MaxLength="10" />
+    <Property Name="Content" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Attachments" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Replierid" Type="varchar" MaxLength="10" />
+    <Property Name="Replier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Replied" Type="datetime" />
+    <Property Name="ReplyDept" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReplyInfo" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_HealthCare">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CrewID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Dotkham" Type="datetime" Nullable="false" />
+    <Property Name="Chieucao" Type="float" />
+    <Property Name="Cannang" Type="float" />
+    <Property Name="chitietsuckhoe" Type="nvarchar" MaxLength="200" />
+    <Property Name="trangthaikham" Type="nvarchar" MaxLength="10" />
+    <Property Name="Expired" Type="datetime" />
+    <Property Name="Isdeleted" Type="bit" Nullable="false" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Creatorid" Type="nvarchar" MaxLength="50" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Modifierid" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="HR_Task">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="TaskMaster" Type="int" />
+    <Property Name="Deadline" Type="datetime" />
+    <Property Name="Completed" Type="datetime" />
+    <Property Name="Progress" Type="int" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="4000" />
+    <Property Name="DueDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AttachmentGroupId" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_Task_Management">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TaskID" Type="int" Nullable="false" />
+    <Property Name="AssigneeID" Type="int" Nullable="false" />
+    <Property Name="Progress" Type="int" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_Task_Management2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TaskID" Type="int" Nullable="false" />
+    <Property Name="AssigneeID" Type="int" Nullable="false" />
+    <Property Name="Progress" Type="int" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Meeting_Detail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MeetingSection" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Value" Type="real" />
+    <Property Name="ScheduleValue" Type="real" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Meeting_Section">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Activity" Type="nvarchar" MaxLength="500" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CrewID" Type="varchar" MaxLength="10" />
+    <Property Name="Account" Type="varchar" MaxLength="50" />
+    <Property Name="FirstNameVn" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastNameVn" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="PPort_Date" Type="datetime" />
+    <Property Name="PPort_Expired" Type="datetime" />
+    <Property Name="InfoConfirmed" Type="int" />
+    <Property Name="IsCrew" Type="bit" />
+    <Property Name="Token" Type="varchar" MaxLength="50" />
+    <Property Name="TokenExpired" Type="datetime" />
+    <Property Name="Code_tv" Type="varchar" MaxLength="10" />
+    <Property Name="name_tv" Type="nvarchar" MaxLength="100" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="man" Type="bit" />
+    <Property Name="dob" Type="date" />
+    <Property Name="noisinh" Type="nvarchar" MaxLength="200" />
+    <Property Name="quoctich" Type="nvarchar" MaxLength="50" />
+    <Property Name="pag_no" Type="varchar" MaxLength="50" />
+    <Property Name="pport_no" Type="varchar" MaxLength="50" />
+    <Property Name="noicap" Type="nvarchar" MaxLength="50" />
+    <Property Name="Group" Type="varchar" MaxLength="5" />
+    <Property Name="course" Type="varchar" MaxLength="5" />
+    <Property Name="main_base" Type="varchar" MaxLength="5" />
+    <Property Name="from_place" Type="varchar" MaxLength="5" />
+    <Property Name="start_date" Type="datetime" />
+    <Property Name="end_date" Type="datetime" />
+    <Property Name="home" Type="varchar" MaxLength="5" />
+    <Property Name="type_tv" Type="char" MaxLength="1" />
+    <Property Name="term_tv" Type="varchar" MaxLength="50" />
+    <Property Name="class_tv" Type="char" MaxLength="1" />
+    <Property Name="ann" Type="bit" />
+    <Property Name="lg" Type="varchar" MaxLength="5" />
+    <Property Name="on_plan" Type="nvarchar" MaxLength="100" />
+    <Property Name="on_route" Type="varchar" MaxLength="5" />
+    <Property Name="vip" Type="nvarchar" MaxLength="50" />
+    <Property Name="knbgoc" Type="nvarchar" MaxLength="100" />
+    <Property Name="kn_khac" Type="varchar" MaxLength="50" />
+    <Property Name="status" Type="char" MaxLength="2" />
+    <Property Name="baclg" Type="varchar" MaxLength="50" />
+    <Property Name="ngaynhan" Type="date" />
+    <Property Name="ngayve" Type="date" />
+    <Property Name="ttut" Type="real" />
+    <Property Name="ma_tt" Type="real" />
+    <Property Name="fly_time" Type="int" />
+    <Property Name="int_time" Type="int" />
+    <Property Name="duty_time" Type="int" />
+    <Property Name="sochbay" Type="int" />
+    <Property Name="dubi" Type="int" />
+    <Property Name="night" Type="int" />
+    <Property Name="lc" Type="char" MaxLength="1" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+    <Property Name="ImageBase64" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Ogranization" Type="varchar" MaxLength="500" />
+    <Property Name="A321" Type="varchar" MaxLength="50" />
+    <Property Name="A330" Type="varchar" MaxLength="50" />
+    <Property Name="A350" Type="varchar" MaxLength="50" />
+    <Property Name="B787" Type="varchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="10" />
+    <Property Name="ActivityName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="ApplicationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Isdeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_Crew_Task_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_Device">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AID" Type="int" Nullable="false" />
+    <Property Name="CID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="OTPCode" Type="varchar" MaxLength="20" />
+    <Property Name="UDID" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Keycode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PushToken" Type="varchar" MaxLength="100" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeviceType" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeviceOS" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacture" Type="nvarchar" MaxLength="100" />
+    <Property Name="OSType" Type="varchar" MaxLength="10" />
+    <Property Name="IsNotify" Type="bit" />
+    <Property Name="MainDevice" Type="bit" />
+    <Property Name="LastLogin" Type="datetime" />
+    <Property Name="OTPDate" Type="datetime" />
+    <Property Name="OTPCount" Type="int" Nullable="false" />
+    <Property Name="OTPFailures" Type="int" Nullable="false" />
+    <Property Name="QRCode" Type="varchar" MaxLength="50" />
+    <Property Name="AuthUDID" Type="varchar" MaxLength="50" />
+    <Property Name="Activate" Type="bit" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Flight_Sync">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlightNo" Type="varchar" MaxLength="50" />
+    <Property Name="Routing" Type="varchar" MaxLength="50" />
+    <Property Name="Fromdate" Type="datetime" Nullable="false" />
+    <Property Name="Todate" Type="datetime" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="LoadTime" Type="datetime" />
+    <Property Name="Version" Type="int" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_LoggedIn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AID" Type="int" Nullable="false" />
+    <Property Name="CID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="QRCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QRTime" Type="datetime" Nullable="false" />
+    <Property Name="Logged" Type="datetime" />
+    <Property Name="MAC" Type="nvarchar" MaxLength="100" />
+    <Property Name="IPv4" Type="nvarchar" MaxLength="100" />
+    <Property Name="IPv6" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeviceType" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeviceOS" Type="nvarchar" MaxLength="100" />
+    <Property Name="LocalUser" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacture" Type="nvarchar" MaxLength="100" />
+    <Property Name="OSType" Type="varchar" MaxLength="10" />
+    <Property Name="Activate" Type="bit" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="UDID" Type="varchar" MaxLength="50" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="RoleType" Type="int" />
+    <Property Name="Isdeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_Role_Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Roleid" Type="int" />
+    <Property Name="Activityid" Type="int" />
+    <Property Name="C" Type="bit" />
+    <Property Name="R" Type="bit" />
+    <Property Name="U" Type="bit" />
+    <Property Name="D" Type="bit" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_User_Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="Activityid" Type="int" />
+    <Property Name="C" Type="bit" />
+    <Property Name="R" Type="bit" />
+    <Property Name="U" Type="bit" />
+    <Property Name="D" Type="bit" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_User_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="Roleid" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="varchar" MaxLength="100" />
+    <Property Name="Modifier" Type="varchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="int" />
+    <Property Name="Modifierid" Type="int" />
+  </EntityType>
+  <EntityType Name="Ticket_Airport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Country" Type="nvarchar" MaxLength="100" />
+    <Property Name="Route" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ticket_Bonus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CID" Type="varchar" MaxLength="10" />
+    <Property Name="ID90" Type="int" />
+    <Property Name="ID75" Type="int" />
+    <Property Name="ID50" Type="int" />
+    <Property Name="Expired" Type="datetime" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ticket_Booking">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pending" Type="bit" />
+    <Property Name="ResCode" Type="varchar" MaxLength="10" />
+    <Property Name="TicketNo" Type="varchar" MaxLength="50" />
+    <Property Name="CID" Type="varchar" MaxLength="10" />
+    <Property Name="Passenger" Type="varchar" MaxLength="50" />
+    <Property Name="FlightNo" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Routing" Type="varchar" MaxLength="50" />
+    <Property Name="FltNote" Type="nvarchar" MaxLength="500" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="SitaAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="SabreStatus" Type="varchar" MaxLength="400" />
+    <Property Name="SabRequest" Type="varchar" MaxLength="100" />
+    <Property Name="SabResponse" Type="varchar" MaxLength="8000" />
+    <Property Name="SabDate" Type="datetime" />
+    <Property Name="SabFlightNo" Type="varchar" MaxLength="50" />
+    <Property Name="SabRouting" Type="varchar" MaxLength="50" />
+    <Property Name="SabDepartdate" Type="datetime" />
+    <Property Name="SabIssueDate" Type="date" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ticket_Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CID" Type="varchar" MaxLength="10" />
+    <Property Name="EmployeeTypeID" Type="int" />
+    <Property Name="EmployeeType" Type="nvarchar" MaxLength="100" />
+    <Property Name="FamilyID" Type="int" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="100" />
+    <Property Name="RelationshipID" Type="int" />
+    <Property Name="Relationship" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="PID" Type="varchar" MaxLength="50" />
+    <Property Name="DepartmentID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Department" Type="nvarchar" MaxLength="200" />
+    <Property Name="Retired" Type="bit" />
+    <Property Name="Seniority" Type="int" />
+    <Property Name="WorkStartDate" Type="datetime" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Ticket_Form">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Contents" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ticket_FormDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="VNAReportID" Type="int" />
+    <Property Name="FamilyID" Type="int" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Relationship" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="PID" Type="varchar" MaxLength="50" />
+    <Property Name="Route" Type="varchar" MaxLength="50" />
+    <Property Name="Base" Type="nchar" MaxLength="10" />
+    <Property Name="TicketCount" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ticket_Quota">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeTypeID" Type="int" />
+    <Property Name="EmployeeType" Type="nvarchar" MaxLength="100" />
+    <Property Name="FromYear" Type="int" />
+    <Property Name="ToYear" Type="int" />
+    <Property Name="ID90" Type="int" />
+    <Property Name="ID75" Type="int" />
+    <Property Name="ID50" Type="int" />
+  </EntityType>
+  <EntityType Name="Ticket_VNAReport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="Status" Type="int" />
+    <Property Name="FormDate" Type="datetime" />
+    <Property Name="FormCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="FormName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Type" Type="nvarchar" MaxLength="10" />
+    <Property Name="Version" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TourRegister2018">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDTour" Type="int" Nullable="false" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MSNV" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="QuanHe" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="AnThongTin" Type="bit" Nullable="false" />
+    <Property Name="NgayCapNhat" Type="datetime" />
+    <Property Name="NguoiCapNhat" Type="nvarchar" MaxLength="50" />
+    <Property Name="TinhTrang" Type="int" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tours2018">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Base" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonVi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FromDate" Type="date" Nullable="false" />
+    <Property Name="ToDate" Type="date" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourUser2018">
+    <Key>
+      <PropertyRef Name="Mail" />
+    </Key>
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MSNV" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="500" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ERMS.dbo.VHR_Employee_Department' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VHR_Employee_Department">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="DepartmentID" />
+      <PropertyRef Name="DepartmentCode" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="DepartmentCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstNameVn" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastNameVn" Type="nvarchar" MaxLength="200" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="252" />
+    <Property Name="FullNameWithDept" Type="nvarchar" MaxLength="265" />
+    <Property Name="CrewID" Type="varchar" MaxLength="10" />
+    <Property Name="Account" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Ogranization" Type="varchar" MaxLength="500" />
+    <Property Name="lc" Type="char" MaxLength="1" />
+    <Property Name="night" Type="int" />
+    <Property Name="sochbay" Type="int" />
+    <Property Name="dubi" Type="int" />
+    <Property Name="duty_time" Type="int" />
+    <Property Name="int_time" Type="int" />
+    <Property Name="fly_time" Type="int" />
+    <Property Name="ma_tt" Type="real" />
+    <Property Name="ttut" Type="real" />
+    <Property Name="ngayve" Type="date" />
+    <Property Name="ngaynhan" Type="date" />
+    <Property Name="baclg" Type="varchar" MaxLength="50" />
+    <Property Name="status" Type="char" MaxLength="2" />
+    <Property Name="knbgoc" Type="nvarchar" MaxLength="100" />
+    <Property Name="vip" Type="nvarchar" MaxLength="50" />
+    <Property Name="kn_khac" Type="varchar" MaxLength="50" />
+    <Property Name="on_route" Type="varchar" MaxLength="5" />
+    <Property Name="on_plan" Type="nvarchar" MaxLength="100" />
+    <Property Name="lg" Type="varchar" MaxLength="5" />
+    <Property Name="ann" Type="bit" />
+    <Property Name="class_tv" Type="char" MaxLength="1" />
+    <Property Name="term_tv" Type="varchar" MaxLength="50" />
+    <Property Name="type_tv" Type="char" MaxLength="1" />
+    <Property Name="home" Type="varchar" MaxLength="5" />
+    <Property Name="end_date" Type="datetime" />
+    <Property Name="start_date" Type="datetime" />
+    <Property Name="from_place" Type="varchar" MaxLength="5" />
+    <Property Name="main_base" Type="varchar" MaxLength="5" />
+    <Property Name="course" Type="varchar" MaxLength="5" />
+    <Property Name="Group" Type="varchar" MaxLength="5" />
+    <Property Name="noicap" Type="nvarchar" MaxLength="50" />
+    <Property Name="pport_no" Type="varchar" MaxLength="50" />
+    <Property Name="pag_no" Type="varchar" MaxLength="50" />
+    <Property Name="quoctich" Type="nvarchar" MaxLength="50" />
+    <Property Name="noisinh" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_CR_OJT_Item_CR_OJT">
+    <End Role="CR_OJT" Type="Self.CR_OJT" Multiplicity="0..1" />
+    <End Role="CR_OJT_Item" Type="Self.CR_OJT_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CR_OJT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CR_OJT_Item">
+        <PropertyRef Name="CR_OJT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CR_Survey_Item_CR_Survey">
+    <End Role="CR_Survey" Type="Self.CR_Survey" Multiplicity="0..1" />
+    <End Role="CR_Survey_Item" Type="Self.CR_Survey_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CR_Survey">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CR_Survey_Item">
+        <PropertyRef Name="CR_Survey_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="API_CR_USP_Flight_FinalReport_Get_Category" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="API_CR_USP_GetAssAvgScoreGroupRouting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetAssAvgScoreTypeTVRouting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetAssessmentAvgScoreByQuestion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetAssessmentList2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetAssessmentTotal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetBKFlightCrew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FO_FlightNo" Type="varchar" Mode="In" />
+    <Parameter Name="FO_Date" Type="datetime" Mode="In" />
+    <Parameter Name="FO_From_Place" Type="varchar" Mode="In" />
+    <Parameter Name="FO_End_Place" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlight_ByKeyword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+    <Parameter Name="CrewID" Type="varchar" Mode="In" />
+    <Parameter Name="IsGetAll" Type="bit" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightAssessmentAvgScore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightCrew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FlightID" Type="bigint" Mode="In" />
+    <Parameter Name="TripID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightCrew2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FlightID" Type="bigint" Mode="In" />
+    <Parameter Name="TripID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightCrewAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FlightID" Type="bigint" Mode="In" />
+    <Parameter Name="TripID" Type="bigint" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightCrewAdminExternalUnit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FlightID" Type="bigint" Mode="In" />
+    <Parameter Name="TripID" Type="bigint" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightExclamationTask" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="CrewID" Type="varchar" Mode="In" />
+    <Parameter Name="IsGetAll" Type="bit" Mode="In" />
+    <Parameter Name="IsExclamation" Type="bit" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightExclamationTask1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="CrewID" Type="varchar" Mode="In" />
+    <Parameter Name="IsGetAll" Type="bit" Mode="In" />
+    <Parameter Name="IsExclamation" Type="bit" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+    <Parameter Name="IsGetLBMB" Type="bit" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightFinalReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightFinalReport2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+    <Parameter Name="IsGetAllCategory" Type="bit" Mode="In" />
+    <Parameter Name="Category" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightFinalReport3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="FromDepartmentCreated" Type="datetime" Mode="In" />
+    <Parameter Name="ToDepartmentCreated" Type="datetime" Mode="In" />
+    <Parameter Name="FromDepartmentReplied" Type="datetime" Mode="In" />
+    <Parameter Name="ToDepartmentReplied" Type="datetime" Mode="In" />
+    <Parameter Name="Emergency" Type="int" Mode="In" />
+    <Parameter Name="ReportStatus" Type="int" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+    <Parameter Name="Category" Type="nvarchar" Mode="In" />
+    <Parameter Name="DepartmentID" Type="int" Mode="In" />
+    <Parameter Name="Replier" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightFinalReport4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="FromDepartmentCreated" Type="datetime" Mode="In" />
+    <Parameter Name="ToDepartmentCreated" Type="datetime" Mode="In" />
+    <Parameter Name="FromDepartmentReplied" Type="datetime" Mode="In" />
+    <Parameter Name="ToDepartmentReplied" Type="datetime" Mode="In" />
+    <Parameter Name="FromReplied" Type="datetime" Mode="In" />
+    <Parameter Name="ToReplied" Type="datetime" Mode="In" />
+    <Parameter Name="Emergency" Type="int" Mode="In" />
+    <Parameter Name="ReportStatus" Type="int" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+    <Parameter Name="Category" Type="nvarchar" Mode="In" />
+    <Parameter Name="DepartmentID" Type="int" Mode="In" />
+    <Parameter Name="Replier" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightFinalReport5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="FromDepartmentCreated" Type="datetime" Mode="In" />
+    <Parameter Name="ToDepartmentCreated" Type="datetime" Mode="In" />
+    <Parameter Name="FromDepartmentReplied" Type="datetime" Mode="In" />
+    <Parameter Name="ToDepartmentReplied" Type="datetime" Mode="In" />
+    <Parameter Name="FromReplied" Type="datetime" Mode="In" />
+    <Parameter Name="ToReplied" Type="datetime" Mode="In" />
+    <Parameter Name="Emergency" Type="int" Mode="In" />
+    <Parameter Name="ReportStatus" Type="int" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+    <Parameter Name="Category" Type="nvarchar" Mode="In" />
+    <Parameter Name="DepartmentID" Type="int" Mode="In" />
+    <Parameter Name="Replier" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightFinalReportByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightFinalReportDeparmentByFinalReportID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FinalReport" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_CR_USP_GetFlightFinalReportDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="FromFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="ToFlightdate" Type="datetime" Mode="In" />
+    <Parameter Name="IsGetDelete" Type="bit" Mode="In" />
+    <Parameter Name="IsGetAllCategory" Type="bit" Mode="In" />
+    <Parameter Name="Category" Type="int" Mode="In" />
+    <Parameter Name="IsGetAllDepartment" Type="bit" Mode="In" />
+    <Parameter Name="DepartmentID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_ER_USP_Get_Support_BySupportID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SupportID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_ER_USP_Get_Supports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsAdmin" Type="bit" Mode="In" />
+    <Parameter Name="CrewID" Type="varchar" Mode="In" />
+    <Parameter Name="Filter" Type="varchar" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_ER_USP_Get_Supports2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsAdmin" Type="bit" Mode="In" />
+    <Parameter Name="CrewID" Type="varchar" Mode="In" />
+    <Parameter Name="Filter" Type="varchar" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_HR_USP_GetHealthCare" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="API_HR_USP_GetTaskChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IsAll" Type="bit" Mode="In" />
+    <Parameter Name="IsCompleted" Type="bit" Mode="In" />
+    <Parameter Name="IsInProgress" Type="bit" Mode="In" />
+    <Parameter Name="IsLate" Type="bit" Mode="In" />
+    <Parameter Name="Departments" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="API_HR_USP_GetTaskInfo2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TaskID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_HR_USP_GetTaskManagement2ByTaskID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TaskID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_HR_USP_GetTaskManagementByTaskID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TaskID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_HR_USP_GetTasks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IsAll" Type="bit" Mode="In" />
+    <Parameter Name="IsCompleted" Type="bit" Mode="In" />
+    <Parameter Name="IsInProgress" Type="bit" Mode="In" />
+    <Parameter Name="IsLate" Type="bit" Mode="In" />
+    <Parameter Name="Departments" Type="varchar" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_HR_USP_GetTasks2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IsAll" Type="bit" Mode="In" />
+    <Parameter Name="IsCompleted" Type="bit" Mode="In" />
+    <Parameter Name="IsInProgress" Type="bit" Mode="In" />
+    <Parameter Name="IsLate" Type="bit" Mode="In" />
+    <Parameter Name="Departments" Type="varchar" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="API_USP_GetCrewDuty_by_Flight" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Flightid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ASP_GetFlights" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CountTour2018" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="CR_GetNews" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetRegister2018" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="HR_GetTasks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Crewid" Type="varchar" Mode="In" />
+    <Parameter Name="Fromdate" Type="date" Mode="In" />
+    <Parameter Name="Todate" Type="date" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="Department" Type="int" Mode="In" />
+    <Parameter Name="Keyword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SYS_BK_Flight_Clean" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SYS_GetDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Employeeid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SYS_GetRoleActivity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SYS_GetRoleUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SYS_GetUserActivity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SYS_GetUserRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SYS_GetUsersbyActivity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ActivityId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SYS_USP_Flight_Crew_Update_TripID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="date" Mode="In" />
+    <Parameter Name="Todate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="USP_GetAllCRUDByUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetCRUD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="Create" Type="bit" Mode="InOut" />
+    <Parameter Name="Read" Type="bit" Mode="InOut" />
+    <Parameter Name="Update" Type="bit" Mode="InOut" />
+    <Parameter Name="Delete" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="USP_GetEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_GetExamByExamTesterID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExamTesterID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetExamTester" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="USP_GetExamTester2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GetFlight_Dutyfree" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GetFlight_NetLine" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GetFlights_NL_FO_byFLT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Date" Type="datetime" Mode="In" />
+    <Parameter Name="Route" Type="varchar" Mode="In" />
+    <Parameter Name="FlightNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GetFlights_NL_FO_byKeyword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Keyword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GetFromDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="Base" Type="nchar" Mode="In" />
+    <Parameter Name="EmployeeType" Type="int" Mode="In" />
+    <Parameter Name="ThamNienFrom" Type="int" Mode="In" />
+    <Parameter Name="ThamNienTo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetFromDetail1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="Base" Type="nchar" Mode="In" />
+    <Parameter Name="EmployeeType" Type="int" Mode="In" />
+    <Parameter Name="ThamNienFrom" Type="int" Mode="In" />
+    <Parameter Name="ThamNienTo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetFromDetailByReportID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VNAReportID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_ReloadFlight_Dutyfree" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="Modifierid" Type="varchar" Mode="In" />
+    <Parameter Name="Modifier" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_Ticket_Booking" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fromdate" Type="date" Mode="In" />
+    <Parameter Name="Todate" Type="date" Mode="In" />
+    <Parameter Name="Keyword" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ERMSModelStoreContainer">
+    <EntitySet Name="BR_BriefingDiary" EntityType="Self.BR_BriefingDiary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Airplane_Crew" EntityType="Self.CR_Airplane_Crew" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Crew_Task_Update_Log" EntityType="Self.CR_Crew_Task_Update_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_Assessment" EntityType="Self.CR_Flight_Assessment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_Assessment_Items" EntityType="Self.CR_Flight_Assessment_Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_Crew" EntityType="Self.CR_Flight_Crew" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_Dutyfree" EntityType="Self.CR_Flight_Dutyfree" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_FinalReport" EntityType="Self.CR_Flight_FinalReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_FinalReport_Category" EntityType="Self.CR_Flight_FinalReport_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_FinalReport_Department" EntityType="Self.CR_Flight_FinalReport_Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_FinalReport_Replied_Log" EntityType="Self.CR_Flight_FinalReport_Replied_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Flight_FinalReport_SubCategory" EntityType="Self.CR_Flight_FinalReport_SubCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_FlightInfo" EntityType="Self.CR_FlightInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_FlightInfo_Netline" EntityType="Self.CR_FlightInfo_Netline" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_OJT" EntityType="Self.CR_OJT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_OJT_Category" EntityType="Self.CR_OJT_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_OJT_Item" EntityType="Self.CR_OJT_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_OJT_Lesson" EntityType="Self.CR_OJT_Lesson" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_OJT_Lesson_Item" EntityType="Self.CR_OJT_Lesson_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Survey" EntityType="Self.CR_Survey" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Survey_Banking_Item" EntityType="Self.CR_Survey_Banking_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Survey_Category" EntityType="Self.CR_Survey_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Survey_Item" EntityType="Self.CR_Survey_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_Trip" EntityType="Self.CR_Trip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EM_Message" EntityType="Self.EM_Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EM_News" EntityType="Self.EM_News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ER_Support" EntityType="Self.ER_Support" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EX_Attachment" EntityType="Self.EX_Attachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exam_Banking_Answer" EntityType="Self.Exam_Banking_Answer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exam_Banking_Question" EntityType="Self.Exam_Banking_Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exam_Banking_Testing" EntityType="Self.Exam_Banking_Testing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exam_Banking_Testing_Section" EntityType="Self.Exam_Banking_Testing_Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exam_Question" EntityType="Self.Exam_Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exam_QuestionType" EntityType="Self.Exam_QuestionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exam_Tester" EntityType="Self.Exam_Tester" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Examinee_Banking" EntityType="Self.Examinee_Banking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Department" EntityType="Self.HR_Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Department_Employee" EntityType="Self.HR_Department_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Form_Category" EntityType="Self.HR_Form_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Forms" EntityType="Self.HR_Forms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_HealthCare" EntityType="Self.HR_HealthCare" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Task" EntityType="Self.HR_Task" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Task_Management" EntityType="Self.HR_Task_Management" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Task_Management2" EntityType="Self.HR_Task_Management2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meeting_Detail" EntityType="Self.Meeting_Detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meeting_Section" EntityType="Self.Meeting_Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Account" EntityType="Self.Sys_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Activity" EntityType="Self.Sys_Activity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Crew_Task_Category" EntityType="Self.Sys_Crew_Task_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Device" EntityType="Self.Sys_Device" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Flight_Sync" EntityType="Self.Sys_Flight_Sync" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_LoggedIn" EntityType="Self.Sys_LoggedIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Role" EntityType="Self.Sys_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Role_Activity" EntityType="Self.Sys_Role_Activity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_User_Activity" EntityType="Self.Sys_User_Activity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_User_Role" EntityType="Self.Sys_User_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_Airport" EntityType="Self.Ticket_Airport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_Bonus" EntityType="Self.Ticket_Bonus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_Booking" EntityType="Self.Ticket_Booking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_Employee" EntityType="Self.Ticket_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_Form" EntityType="Self.Ticket_Form" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_FormDetail" EntityType="Self.Ticket_FormDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_Quota" EntityType="Self.Ticket_Quota" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_VNAReport" EntityType="Self.Ticket_VNAReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourRegister2018" EntityType="Self.TourRegister2018" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tours2018" EntityType="Self.Tours2018" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourUser2018" EntityType="Self.TourUser2018" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VHR_Employee_Department" EntityType="Self.VHR_Employee_Department" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VHR_Employee_Department].[ID] AS [ID], 
+    [VHR_Employee_Department].[EmployeeID] AS [EmployeeID], 
+    [VHR_Employee_Department].[DepartmentID] AS [DepartmentID], 
+    [VHR_Employee_Department].[DepartmentCode] AS [DepartmentCode], 
+    [VHR_Employee_Department].[DepartmentName] AS [DepartmentName], 
+    [VHR_Employee_Department].[FirstNameVn] AS [FirstNameVn], 
+    [VHR_Employee_Department].[LastNameVn] AS [LastNameVn], 
+    [VHR_Employee_Department].[FullName] AS [FullName], 
+    [VHR_Employee_Department].[FullNameWithDept] AS [FullNameWithDept], 
+    [VHR_Employee_Department].[CrewID] AS [CrewID], 
+    [VHR_Employee_Department].[Account] AS [Account], 
+    [VHR_Employee_Department].[Gender] AS [Gender], 
+    [VHR_Employee_Department].[Email] AS [Email], 
+    [VHR_Employee_Department].[Phone] AS [Phone], 
+    [VHR_Employee_Department].[Ogranization] AS [Ogranization], 
+    [VHR_Employee_Department].[lc] AS [lc], 
+    [VHR_Employee_Department].[night] AS [night], 
+    [VHR_Employee_Department].[sochbay] AS [sochbay], 
+    [VHR_Employee_Department].[dubi] AS [dubi], 
+    [VHR_Employee_Department].[duty_time] AS [duty_time], 
+    [VHR_Employee_Department].[int_time] AS [int_time], 
+    [VHR_Employee_Department].[fly_time] AS [fly_time], 
+    [VHR_Employee_Department].[ma_tt] AS [ma_tt], 
+    [VHR_Employee_Department].[ttut] AS [ttut], 
+    [VHR_Employee_Department].[ngayve] AS [ngayve], 
+    [VHR_Employee_Department].[ngaynhan] AS [ngaynhan], 
+    [VHR_Employee_Department].[baclg] AS [baclg], 
+    [VHR_Employee_Department].[status] AS [status], 
+    [VHR_Employee_Department].[knbgoc] AS [knbgoc], 
+    [VHR_Employee_Department].[vip] AS [vip], 
+    [VHR_Employee_Department].[kn_khac] AS [kn_khac], 
+    [VHR_Employee_Department].[on_route] AS [on_route], 
+    [VHR_Employee_Department].[on_plan] AS [on_plan], 
+    [VHR_Employee_Department].[lg] AS [lg], 
+    [VHR_Employee_Department].[ann] AS [ann], 
+    [VHR_Employee_Department].[class_tv] AS [class_tv], 
+    [VHR_Employee_Department].[term_tv] AS [term_tv], 
+    [VHR_Employee_Department].[type_tv] AS [type_tv], 
+    [VHR_Employee_Department].[home] AS [home], 
+    [VHR_Employee_Department].[end_date] AS [end_date], 
+    [VHR_Employee_Department].[start_date] AS [start_date], 
+    [VHR_Employee_Department].[from_place] AS [from_place], 
+    [VHR_Employee_Department].[main_base] AS [main_base], 
+    [VHR_Employee_Department].[course] AS [course], 
+    [VHR_Employee_Department].[Group] AS [Group], 
+    [VHR_Employee_Department].[noicap] AS [noicap], 
+    [VHR_Employee_Department].[pport_no] AS [pport_no], 
+    [VHR_Employee_Department].[pag_no] AS [pag_no], 
+    [VHR_Employee_Department].[quoctich] AS [quoctich], 
+    [VHR_Employee_Department].[noisinh] AS [noisinh]
+    FROM [dbo].[VHR_Employee_Department] AS [VHR_Employee_Department]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CR_OJT_Item_CR_OJT" Association="Self.FK_CR_OJT_Item_CR_OJT">
+      <End Role="CR_OJT" EntitySet="CR_OJT" />
+      <End Role="CR_OJT_Item" EntitySet="CR_OJT_Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CR_Survey_Item_CR_Survey" Association="Self.FK_CR_Survey_Item_CR_Survey">
+      <End Role="CR_Survey" EntitySet="CR_Survey" />
+      <End Role="CR_Survey_Item" EntitySet="CR_Survey_Item" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

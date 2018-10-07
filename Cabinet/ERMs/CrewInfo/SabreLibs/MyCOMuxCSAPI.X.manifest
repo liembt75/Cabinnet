@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+<assemblyIdentity
+    type="win32"
+    name="MyCOMuxCSAPI.X"
+    version="1.0.0.0" />
+<file name="COMuxCSAPI.dll">
+    <comClass
+        description="COMuxCSAPI"
+        clsid="{7C408D8E-33CD-11D4-B892-00E02C073A29}"
+        threadingModel="Both" />
+</file>
+</assembly>

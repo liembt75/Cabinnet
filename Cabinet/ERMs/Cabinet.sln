@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApplication1\ConsoleApp.csproj", "{629744D7-E5E4-4B3F-AC5A-4394BA22E88B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERMs.Data", "ERMs.Data\ERMs.Data.csproj", "{4C6ABB29-B8B8-4EDB-9B77-284D35F298AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erms.Utils", "Erms.Utils\Erms.Utils.csproj", "{6B456584-B56F-4BAD-B6B1-4D277193F4FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERMs.Sys", "ERMs.Sys\ERMs.Sys.csproj", "{368E1E2E-9533-4E65-BE9E-E746476EC531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERMs.SharedBase", "ERMs.SharedBase\ERMs.SharedBase.csproj", "{86412C40-5A7D-42C5-B776-895975C3350E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrewInfo", "CrewInfo\CrewInfo.csproj", "{B931B9F0-B441-406F-9882-42818DF240A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "Test\TestForm.csproj", "{8F306B16-E2E4-4E9B-9D49-B92CB5A6AC53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicket", "eTicket\eTicket.csproj", "{5836FA28-0B00-42D7-98B5-45672931CA4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{629744D7-E5E4-4B3F-AC5A-4394BA22E88B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{629744D7-E5E4-4B3F-AC5A-4394BA22E88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{629744D7-E5E4-4B3F-AC5A-4394BA22E88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{629744D7-E5E4-4B3F-AC5A-4394BA22E88B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C6ABB29-B8B8-4EDB-9B77-284D35F298AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6ABB29-B8B8-4EDB-9B77-284D35F298AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6ABB29-B8B8-4EDB-9B77-284D35F298AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6ABB29-B8B8-4EDB-9B77-284D35F298AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B456584-B56F-4BAD-B6B1-4D277193F4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B456584-B56F-4BAD-B6B1-4D277193F4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B456584-B56F-4BAD-B6B1-4D277193F4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B456584-B56F-4BAD-B6B1-4D277193F4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368E1E2E-9533-4E65-BE9E-E746476EC531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368E1E2E-9533-4E65-BE9E-E746476EC531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368E1E2E-9533-4E65-BE9E-E746476EC531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368E1E2E-9533-4E65-BE9E-E746476EC531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86412C40-5A7D-42C5-B776-895975C3350E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86412C40-5A7D-42C5-B776-895975C3350E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86412C40-5A7D-42C5-B776-895975C3350E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86412C40-5A7D-42C5-B776-895975C3350E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B931B9F0-B441-406F-9882-42818DF240A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B931B9F0-B441-406F-9882-42818DF240A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B931B9F0-B441-406F-9882-42818DF240A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B931B9F0-B441-406F-9882-42818DF240A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F306B16-E2E4-4E9B-9D49-B92CB5A6AC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F306B16-E2E4-4E9B-9D49-B92CB5A6AC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F306B16-E2E4-4E9B-9D49-B92CB5A6AC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F306B16-E2E4-4E9B-9D49-B92CB5A6AC53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5836FA28-0B00-42D7-98B5-45672931CA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5836FA28-0B00-42D7-98B5-45672931CA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5836FA28-0B00-42D7-98B5-45672931CA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5836FA28-0B00-42D7-98B5-45672931CA4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vncr.visualstudio.com/
+		SccProjectUniqueName0 = ConsoleApplication1\\ConsoleApp.csproj
+		SccProjectName0 = ConsoleApplication1
+		SccLocalPath0 = ConsoleApplication1
+		SccProjectUniqueName1 = CrewInfo\\CrewInfo.csproj
+		SccProjectName1 = CrewInfo
+		SccLocalPath1 = CrewInfo
+		SccProjectUniqueName2 = ERMs.Data\\ERMs.Data.csproj
+		SccProjectName2 = ERMs.Data
+		SccLocalPath2 = ERMs.Data
+		SccProjectUniqueName3 = ERMs.SharedBase\\ERMs.SharedBase.csproj
+		SccProjectName3 = ERMs.SharedBase
+		SccLocalPath3 = ERMs.SharedBase
+		SccProjectUniqueName4 = ERMs.Sys\\ERMs.Sys.csproj
+		SccProjectName4 = ERMs.Sys
+		SccLocalPath4 = ERMs.Sys
+		SccProjectUniqueName5 = Erms.Utils\\Erms.Utils.csproj
+		SccProjectName5 = Erms.Utils
+		SccLocalPath5 = Erms.Utils
+		SccProjectUniqueName6 = eTicket\\eTicket.csproj
+		SccProjectName6 = eTicket
+		SccLocalPath6 = eTicket
+		SccProjectUniqueName7 = Test\\TestForm.csproj
+		SccProjectName7 = Test
+		SccLocalPath7 = Test
+		SccLocalPath8 = .
+	EndGlobalSection
+EndGlobal

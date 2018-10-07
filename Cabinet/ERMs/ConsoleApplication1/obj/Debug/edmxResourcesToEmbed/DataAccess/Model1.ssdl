@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CR_Dbf_lbmb">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codefly" Type="varchar" MaxLength="10" />
+    <Property Name="CodeApl" Type="nvarchar" MaxLength="10" />
+    <Property Name="TypeApl" Type="nvarchar" MaxLength="10" />
+    <Property Name="Acf" Type="nvarchar" MaxLength="10" />
+    <Property Name="FlightNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="Leg" Type="nvarchar" MaxLength="10" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="StartTime" Type="varchar" MaxLength="10" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="EndTime" Type="varchar" MaxLength="10" />
+    <Property Name="AcfNo" Type="varchar" MaxLength="10" />
+    <Property Name="Cfg" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="varchar" MaxLength="10" />
+    <Property Name="Note" Type="varchar" MaxLength="100" />
+    <Property Name="Base" Type="varchar" MaxLength="10" />
+    <Property Name="UserNane" Type="varchar" MaxLength="10" />
+    <Property Name="EditDate" Type="date" />
+    <Property Name="EditTime" Type="varchar" MaxLength="10" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_FlightInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="FlightNo" Type="varchar" MaxLength="10" />
+    <Property Name="Routing" Type="varchar" MaxLength="50" />
+    <Property Name="Aircraft" Type="varchar" MaxLength="10" />
+    <Property Name="RegisterNo" Type="varchar" MaxLength="10" />
+    <Property Name="UTC" Type="datetime" />
+    <Property Name="Departed" Type="datetime" />
+    <Property Name="Arrived" Type="datetime" />
+    <Property Name="Parking" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeApl" Type="varchar" MaxLength="10" />
+    <Property Name="Acf" Type="varchar" MaxLength="10" />
+    <Property Name="AcfNo" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Note" Type="varchar" MaxLength="100" />
+    <Property Name="Carry" Type="varchar" MaxLength="10" />
+    <Property Name="PaxC" Type="int" />
+    <Property Name="PaxI" Type="int" />
+    <Property Name="PaxY" Type="int" />
+    <Property Name="VIP" Type="int" />
+    <Property Name="CIP" Type="int" />
+    <Property Name="PaxBooking" Type="varchar" MaxLength="50" />
+    <Property Name="PaxClosed" Type="varchar" MaxLength="50" />
+    <Property Name="Wchr" Type="int" />
+    <Property Name="SM" Type="int" />
+    <Property Name="BSCT" Type="int" />
+    <Property Name="INF" Type="int" />
+    <Property Name="UM" Type="int" />
+    <Property Name="BLND" Type="int" />
+    <Property Name="DEAF" Type="int" />
+    <Property Name="STCR" Type="int" />
+    <Property Name="EXST" Type="int" />
+    <Property Name="DEPU" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ER_Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code_tv" Type="varchar" MaxLength="10" />
+    <Property Name="name_tv" Type="nvarchar" MaxLength="100" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="man" Type="bit" />
+    <Property Name="dob" Type="date" />
+    <Property Name="noisinh" Type="nvarchar" MaxLength="200" />
+    <Property Name="quoctich" Type="nvarchar" MaxLength="50" />
+    <Property Name="pag_no" Type="varchar" MaxLength="50" />
+    <Property Name="pport_no" Type="varchar" MaxLength="50" />
+    <Property Name="noicap" Type="nvarchar" MaxLength="50" />
+    <Property Name="Group" Type="varchar" MaxLength="5" />
+    <Property Name="course" Type="varchar" MaxLength="5" />
+    <Property Name="main_base" Type="varchar" MaxLength="5" />
+    <Property Name="from_place" Type="varchar" MaxLength="5" />
+    <Property Name="start_date" Type="datetime" />
+    <Property Name="end_date" Type="datetime" />
+    <Property Name="home" Type="varchar" MaxLength="5" />
+    <Property Name="type_tv" Type="char" MaxLength="1" />
+    <Property Name="term_tv" Type="varchar" MaxLength="50" />
+    <Property Name="class_tv" Type="char" MaxLength="1" />
+    <Property Name="ann" Type="bit" />
+    <Property Name="lg" Type="varchar" MaxLength="5" />
+    <Property Name="on_plan" Type="nvarchar" MaxLength="100" />
+    <Property Name="on_route" Type="varchar" MaxLength="5" />
+    <Property Name="vip" Type="nvarchar" MaxLength="50" />
+    <Property Name="knbgoc" Type="nvarchar" MaxLength="100" />
+    <Property Name="kn_khac" Type="varchar" MaxLength="50" />
+    <Property Name="status" Type="char" MaxLength="2" />
+    <Property Name="baclg" Type="varchar" MaxLength="50" />
+    <Property Name="ngaynhan" Type="date" />
+    <Property Name="ngayve" Type="date" />
+    <Property Name="ttut" Type="real" />
+    <Property Name="ma_tt" Type="real" />
+    <Property Name="fly_time" Type="int" />
+    <Property Name="int_time" Type="int" />
+    <Property Name="duty_time" Type="int" />
+    <Property Name="sochbay" Type="int" />
+    <Property Name="dubi" Type="int" />
+    <Property Name="night" Type="int" />
+    <Property Name="lc" Type="char" MaxLength="1" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_SabreLoader">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlightId" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="FlightNo" Type="varchar" MaxLength="10" />
+    <Property Name="Routing" Type="varchar" MaxLength="50" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Request" Type="varchar" MaxLength="100" />
+    <Property Name="Response" Type="varchar(max)" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="ERMSModelStoreContainer">
+    <EntitySet Name="CR_Dbf_lbmb" EntityType="Self.CR_Dbf_lbmb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_FlightInfo" EntityType="Self.CR_FlightInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ER_Employee" EntityType="Self.ER_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_SabreLoader" EntityType="Self.Sys_SabreLoader" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

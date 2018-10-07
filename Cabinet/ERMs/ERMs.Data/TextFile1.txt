@@ -1,0 +1,24 @@
+﻿ add in EF file 
+ 
+  public ERMSEntities(string connectionString) : base(connectionString)
+        {
+
+        }
+
+
+		 //"Data Source=SERVER;Initial Catalog=DATABASE;Persist Security Info=True;User ID=USERNAME;Password=PASSWORD;MultipleActiveResultSets=True"
+        public ERMSEntities1():base("Data Source=.;Initial Catalog=ERMS;Persist Security Info=True;User ID=data;Password=crew@vna;MultipleActiveResultSets=True")
+            //: base("name=ERMSEntities1")
+        {
+        }
+
+		//Current
+		 public ERMSEntities(string efConnectionString) : base(efConnectionString)       
+        {
+
+        }
+
+		public Entities(string connectionString) : base(connectionString)       
+        {
+
+        }

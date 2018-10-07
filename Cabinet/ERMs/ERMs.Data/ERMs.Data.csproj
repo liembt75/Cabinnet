@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C6ABB29-B8B8-4EDB-9B77-284D35F298AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERMs.Data</RootNamespace>
+    <AssemblyName>ERMs.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Barcode, Version=2.9.0.11040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Barcode.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Common, Version=1.9.0.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DataExport, Version=3.5.131.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.DataExport.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DataExport.ResourceMgr, Version=1.6.71.4040, Culture=neutral, PublicKeyToken=4bc1500157862925, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.DataExport.ResourceMgr.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=6.9.11.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Doc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DocViewer.Forms, Version=3.9.1.5040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.DocViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Email, Version=1.3.2.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Email.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.License.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.OfficeViewer.Forms, Version=3.9.1.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.OfficeViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=4.9.4.2040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=3.9.2.3340, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.PdfViewer.Asp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=3.9.2.3340, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.PdfViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Presentation, Version=3.9.5.9040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Spreadsheet, Version=2.9.0.8040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=8.9.4.6040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.3.9.2\lib\net40\Spire.XLS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis\AnlFlightDal.cs" />
+    <Compile Include="API_CR_USP_Flight_FinalReport_Get_Category_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetAssAvgScoreGroupRouting_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetAssAvgScoreTypeTVRouting_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetAssessmentAvgScoreByQuestion_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetAssessmentList2_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetAssessmentList3_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetAssessmentTotal_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetBKFlightCrew_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightAssessmentAvgScore_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightCrew2_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightCrewAdminExternalUnit_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightCrewAdmin_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightCrew_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightExclamationTask1_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightExclamationTask_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightFinalReport2_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightFinalReport3_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightFinalReport4_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightFinalReport5_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightFinalReportByID_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightFinalReportDeparmentByFinalReportID_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightFinalReportDepartment_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlightFinalReport_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_CR_USP_GetFlight_ByKeyword_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_ER_USP_Get_Supports2_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_ER_USP_Get_Supports_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_ER_USP_Get_Support_BySupportID_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_HR_USP_GetHealthCare_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_HR_USP_GetTaskChart_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_HR_USP_GetTaskInfo2_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_HR_USP_GetTaskManagement2ByTaskID_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_HR_USP_GetTaskManagementByTaskID_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_HR_USP_GetTasks2_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_HR_USP_GetTasks_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="API_USP_GetCrewDuty_by_Flight_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ASP_GetFlights_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Briefing\BriefingDal.cs" />
+    <Compile Include="Briefing\SysAccBrfDiaryModel.cs" />
+    <Compile Include="BR_BriefingDiary.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountTour2018_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_FlightInfo_Netline.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_Dutyfree.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_GetNews_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_OJT.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_OJT_Category.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_OJT_Item.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_OJT_Lesson.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_OJT_Lesson_Item.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Survey.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Survey_Banking_Item.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Survey_Category.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Survey_Item.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMMessage\EMMessageDal.cs" />
+    <Compile Include="EMMessage\EMMessageModel.cs" />
+    <Compile Include="EM_Message.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EM_News.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERMSEntityPartial.cs" />
+    <Compile Include="Flight\FlightDutyModel.cs" />
+    <Compile Include="Flight\FlightInfoExModel.cs" />
+    <Compile Include="Flight\FlightNetLineDal.cs" />
+    <Compile Include="Form\HRFormModel.cs" />
+    <Compile Include="GetRegister2018_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoggedIn\LoggedInDal.cs" />
+    <Compile Include="Meeting\MeetingDal.cs" />
+    <Compile Include="Meeting_Detail.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting_Section.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ojt\OJTCategoryModel.cs" />
+    <Compile Include="Ojt\OJTDal.cs" />
+    <Compile Include="Ojt\OJTLessonItemModel.cs" />
+    <Compile Include="Ojt\OJTLessonModel.cs" />
+    <Compile Include="Ojt\OJTModel.cs" />
+    <Compile Include="Salesforce\SalesforceModel.cs" />
+    <Compile Include="Survey\SurveyBankingItemModel.cs" />
+    <Compile Include="Survey\SurveyCategoryModel.cs" />
+    <Compile Include="Survey\SurveyDal.cs" />
+    <Compile Include="CMSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Airplane_Crew.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Crew_Task_Update_Log.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_FlightInfo.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_Assessment.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_Assessment_Items.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_Crew.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_FinalReport.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_FinalReport_Category.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_FinalReport_Department.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_FinalReport_Replied_Log.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Flight_FinalReport_SubCategory.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CR_Trip.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERMSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERMSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERMSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERMSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERMSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ER_Support.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Examinee_Banking.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\ExamBankingQuestionModel.cs" />
+    <Compile Include="Exam\ExamBankingTestingModel.cs" />
+    <Compile Include="Exam\ExamDal.cs" />
+    <Compile Include="Exam\ExamineeModel.cs" />
+    <Compile Include="Exam\ExamQuestionModel.cs" />
+    <Compile Include="Exam\ExamTesterModel.cs" />
+    <Compile Include="Exam_Banking_Answer.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam_Banking_Question.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam_Banking_Testing.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam_Banking_Testing_Section.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam_Question.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam_QuestionType.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam_Tester.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EX_Attachment.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Flight\FlightAssessmentFlightAssessmentItemModel.cs" />
+    <Compile Include="Flight\FlightAssessmentModel.cs" />
+    <Compile Include="Flight\FlightDal.cs" />
+    <Compile Include="Flight\FlightFinalReportModel.cs" />
+    <Compile Include="Flight\FlightInfoFlightCrewModel.cs" />
+    <Compile Include="Flight\FlightInfoModel.cs" />
+    <Compile Include="Flight\FlightReportDetailTemplate.cs" />
+    <Compile Include="Flight\FlightReportTemplate.cs" />
+    <Compile Include="Form\FormDal.cs" />
+    <Compile Include="HealthCare\HealthCareDal.cs" />
+    <Compile Include="HealthCare\HealthCareModel.cs" />
+    <Compile Include="HR_Department.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Department_Employee.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Forms.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Form_Category.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_GetTasks_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_HealthCare.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Task.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Task_Management.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Task_Management2.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Log\CrewTaskLogModel.cs" />
+    <Compile Include="Log\LogDal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PView_giadinh1.cs">
+      <DependentUpon>VietnamRedantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecruitmentCandidate.cs">
+      <DependentUpon>CMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Recruitment\RecruitmentDal.cs" />
+    <Compile Include="Support\TiepVienLookUpModel.cs" />
+    <Compile Include="Survey\SurveyItemModel.cs" />
+    <Compile Include="Survey\SurveyModel.cs" />
+    <Compile Include="System\SysActivityModel.cs" />
+    <Compile Include="System\SysDeviceModel.cs" />
+    <Compile Include="System\SystemDAL.cs" />
+    <Compile Include="System\UserInfoModel.cs" />
+    <Compile Include="Sys_Account.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Activity.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Crew_Task_Category.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Device.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Flight_Sync.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_GetDepartment_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_GetRoleActivity_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_GetRoleUser_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_GetUserActivity_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_GetUserRole_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_GetUsersbyActivity_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_LoggedIn.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Role.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Role_Activity.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_User_Activity.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_User_Role.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Task\MonthlyMeetingModel.cs" />
+    <Compile Include="Task\SupportDal.cs" />
+    <Compile Include="Task\TaskDal.cs" />
+    <Compile Include="Task\TaskDetailModel.cs" />
+    <Compile Include="Task\TaskModel.cs" />
+    <Compile Include="Ticket\EmployeeModel.cs" />
+    <Compile Include="Ticket\FormDetailModel.cs" />
+    <Compile Include="Ticket\FormReportModel.cs" />
+    <Compile Include="Ticket\ReportDetailModel.cs" />
+    <Compile Include="Ticket\ReportModel.cs" />
+    <Compile Include="Ticket\RouteModel.cs" />
+    <Compile Include="Ticket\TicketAirportModel.cs" />
+    <Compile Include="Ticket\TicketBookingModel.cs" />
+    <Compile Include="Ticket\TicketDal.cs" />
+    <Compile Include="Ticket\TicketFormDetailPrint.cs" />
+    <Compile Include="Ticket\TicketFormModel.cs" />
+    <Compile Include="Ticket\TicketFormPrint.cs" />
+    <Compile Include="Ticket\TicketModel.cs" />
+    <Compile Include="Ticket_Airport.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_Bonus.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_Booking.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_Employee.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_Form.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_FormDetail.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_Quota.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_VNAReport.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourRegister2018.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tours2018.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourUser2018.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tour\TourDal.cs" />
+    <Compile Include="USP_GetAllCRUDByUserID_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetEmployee_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetExamByExamTesterID_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetExamTester2_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetExamTester_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetFlights_NL_FO_byFLT_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetFlights_NL_FO_byKeyword_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetFlight_Dutyfree_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetFlight_NetLine_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetFromDetail1_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetFromDetailByReportID_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_GetFromDetail_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_Ticket_Booking_Result.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VHR_Employee_Department.cs">
+      <DependentUpon>ERMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VietnamRedantModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VietnamRedantModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VietnamRedantModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VietnamRedantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VietnamRedantModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VietnamRedantModel.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERMs.Sys\ERMs.Sys.csproj">
+      <Project>{368e1e2e-9533-4e65-be9e-e746476ec531}</Project>
+      <Name>ERMs.Sys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Erms.Utils\Erms.Utils.csproj">
+      <Project>{6b456584-b56f-4bad-b6b1-4d277193f4fc}</Project>
+      <Name>Erms.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="CMSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CMSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CMSModel.edmx.diagram">
+      <DependentUpon>CMSModel.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Task\App.Config" />
+    <EntityDeploy Include="ERMSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ERMSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ERMSModel.edmx.diagram">
+      <DependentUpon>ERMSModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="VietnamRedantModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VietnamRedantModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VietnamRedantModel.edmx.diagram">
+      <DependentUpon>VietnamRedantModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CMSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CMSModel.edmx</DependentUpon>
+      <LastGenOutput>CMSModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CMSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CMSModel.edmx</DependentUpon>
+      <LastGenOutput>CMSModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="ERMSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERMSModel.edmx</DependentUpon>
+      <LastGenOutput>ERMSModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ERMSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERMSModel.edmx</DependentUpon>
+      <LastGenOutput>ERMSModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="TextFile1.txt" />
+    <Content Include="VietnamRedantModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VietnamRedantModel.edmx</DependentUpon>
+      <LastGenOutput>VietnamRedantModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VietnamRedantModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VietnamRedantModel.edmx</DependentUpon>
+      <LastGenOutput>VietnamRedantModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="COMUXCSAPILib">
+      <Guid>{7C408D80-33CD-11D4-B892-00E02C073A29}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sabre\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

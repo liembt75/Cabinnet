@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f43a4063f670406681b3f6615d97131c" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="ERMSModel.BR_BriefingDiary" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Exam_Banking_Answer" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Exam_Banking_Question" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Exam_Banking_Testing" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Exam_Banking_Testing_Section" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Exam_Question" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Exam_QuestionType" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Exam_Tester" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_Assessment" Width="2" PointX="9.75" PointY="9.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_Assessment_Items" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_FinalReport_Category" Width="2.5" PointX="10.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_FinalReport_Department" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_FinalReport_Replied_Log" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_FinalReport_SubCategory" Width="2.5" PointX="0.75" PointY="11.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.HR_Department" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.HR_Department_Employee" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.ER_Support" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.EX_Attachment" Width="1.5" PointX="9.75" PointY="11.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.HR_Task" Width="1.5" PointX="11.75" PointY="11.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.HR_Task_Management" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.HR_Task_Management2" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_Device" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_Role" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_Role_Activity" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Ticket_Airport" Width="1.5" PointX="13.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Ticket_Bonus" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Ticket_Booking" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Ticket_Employee" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Ticket_Form" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Ticket_FormDetail" Width="1.5" PointX="13.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Ticket_Quota" Width="1.5" PointX="10.75" PointY="13.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Ticket_VNAReport" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.VHR_Employee_Department" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Crew_Task_Update_Log" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_Crew" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_FlightInfo" Width="1.5" PointX="12.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Trip" Width="1.5" PointX="14.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.HR_HealthCare" Width="1.5" PointX="15.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_Account" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_Activity" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_Crew_Task_Category" Width="1.5" PointX="6.75" PointY="15.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.HR_Form_Category" Width="1.5" PointX="8.75" PointY="15.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.Examinee_Banking" Width="1.5" PointX="15.75" PointY="10.75" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_User_Activity" Width="1.5" PointX="16.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_User_Role" Width="1.5" PointX="10.75" PointY="16.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_OJT" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERMSModel.CR_OJT_Category" Width="1.5" PointX="12.75" PointY="16.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_OJT_Lesson" Width="1.5" PointX="16.75" PointY="14.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Survey" Width="1.5" PointX="5.75" PointY="1.125" />
+        <EntityTypeShape EntityType="ERMSModel.EM_Message" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Survey_Item" Width="1.5" PointX="8" PointY="1.75" />
+        <AssociationConnector Association="ERMSModel.FK_CR_Survey_Item_CR_Survey" />
+        <EntityTypeShape EntityType="ERMSModel.CR_OJT_Item" Width="1.5" PointX="3" PointY="1.5" IsExpanded="false" />
+        <AssociationConnector Association="ERMSModel.FK_CR_OJT_Item_CR_OJT" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Survey_Category" Width="1.5" PointX="5.375" PointY="17.75" />
+        <EntityTypeShape EntityType="ERMSModel.HR_Forms" Width="1.5" PointX="7.375" PointY="17.75" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_LoggedIn" Width="1.5" PointX="19.375" PointY="4.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_OJT_Lesson_Item" Width="1.5" PointX="19.375" PointY="11.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Survey_Banking_Item" Width="1.5" PointX="15.375" PointY="19.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Airplane_Crew" Width="1.5" PointX="19.375" PointY="17.75" />
+        <EntityTypeShape EntityType="ERMSModel.Sys_Flight_Sync" Width="1.5" PointX="9.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_FinalReport" Width="1.5" PointX="21.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERMSModel.Meeting_Detail" Width="1.5" PointX="21.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ERMSModel.Meeting_Section" Width="1.5" PointX="18.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERMSModel.Tours2018" Width="1.5" PointX="21.375" PointY="12.75" />
+        <EntityTypeShape EntityType="ERMSModel.TourUser2018" Width="1.5" PointX="21.375" PointY="16.75" />
+        <EntityTypeShape EntityType="ERMSModel.EM_News" Width="1.5" PointX="21.375" PointY="19.75" />
+        <EntityTypeShape EntityType="ERMSModel.TourRegister2018" Width="1.5" PointX="11.375" PointY="21.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_Flight_Dutyfree" Width="1.5" PointX="3.375" PointY="22.75" />
+        <EntityTypeShape EntityType="ERMSModel.CR_FlightInfo_Netline" Width="1.5" PointX="17.375" PointY="22.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

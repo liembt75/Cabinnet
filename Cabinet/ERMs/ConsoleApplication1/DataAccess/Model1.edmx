@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ERMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CR_Dbf_lbmb">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codefly" Type="varchar" MaxLength="10" />
+          <Property Name="CodeApl" Type="nvarchar" MaxLength="10" />
+          <Property Name="TypeApl" Type="nvarchar" MaxLength="10" />
+          <Property Name="Acf" Type="nvarchar" MaxLength="10" />
+          <Property Name="FlightNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="Leg" Type="nvarchar" MaxLength="10" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="StartTime" Type="varchar" MaxLength="10" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="EndTime" Type="varchar" MaxLength="10" />
+          <Property Name="AcfNo" Type="varchar" MaxLength="10" />
+          <Property Name="Cfg" Type="varchar" MaxLength="10" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="Note" Type="varchar" MaxLength="100" />
+          <Property Name="Base" Type="varchar" MaxLength="10" />
+          <Property Name="UserNane" Type="varchar" MaxLength="10" />
+          <Property Name="EditDate" Type="date" />
+          <Property Name="EditTime" Type="varchar" MaxLength="10" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+          <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+          <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CR_FlightInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="date" />
+          <Property Name="FlightNo" Type="varchar" MaxLength="10" />
+          <Property Name="Routing" Type="varchar" MaxLength="50" />
+          <Property Name="Aircraft" Type="varchar" MaxLength="10" />
+          <Property Name="RegisterNo" Type="varchar" MaxLength="10" />
+          <Property Name="UTC" Type="datetime" />
+          <Property Name="Departed" Type="datetime" />
+          <Property Name="Arrived" Type="datetime" />
+          <Property Name="Parking" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeApl" Type="varchar" MaxLength="10" />
+          <Property Name="Acf" Type="varchar" MaxLength="10" />
+          <Property Name="AcfNo" Type="varchar" MaxLength="10" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Note" Type="varchar" MaxLength="100" />
+          <Property Name="Carry" Type="varchar" MaxLength="10" />
+          <Property Name="PaxC" Type="int" />
+          <Property Name="PaxI" Type="int" />
+          <Property Name="PaxY" Type="int" />
+          <Property Name="VIP" Type="int" />
+          <Property Name="CIP" Type="int" />
+          <Property Name="PaxBooking" Type="varchar" MaxLength="50" />
+          <Property Name="PaxClosed" Type="varchar" MaxLength="50" />
+          <Property Name="Wchr" Type="int" />
+          <Property Name="SM" Type="int" />
+          <Property Name="BSCT" Type="int" />
+          <Property Name="INF" Type="int" />
+          <Property Name="UM" Type="int" />
+          <Property Name="BLND" Type="int" />
+          <Property Name="DEAF" Type="int" />
+          <Property Name="STCR" Type="int" />
+          <Property Name="EXST" Type="int" />
+          <Property Name="DEPU" Type="int" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+          <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+          <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ER_Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code_tv" Type="varchar" MaxLength="10" />
+          <Property Name="name_tv" Type="nvarchar" MaxLength="100" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="man" Type="bit" />
+          <Property Name="dob" Type="date" />
+          <Property Name="noisinh" Type="nvarchar" MaxLength="200" />
+          <Property Name="quoctich" Type="nvarchar" MaxLength="50" />
+          <Property Name="pag_no" Type="varchar" MaxLength="50" />
+          <Property Name="pport_no" Type="varchar" MaxLength="50" />
+          <Property Name="noicap" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group" Type="varchar" MaxLength="5" />
+          <Property Name="course" Type="varchar" MaxLength="5" />
+          <Property Name="main_base" Type="varchar" MaxLength="5" />
+          <Property Name="from_place" Type="varchar" MaxLength="5" />
+          <Property Name="start_date" Type="datetime" />
+          <Property Name="end_date" Type="datetime" />
+          <Property Name="home" Type="varchar" MaxLength="5" />
+          <Property Name="type_tv" Type="char" MaxLength="1" />
+          <Property Name="term_tv" Type="varchar" MaxLength="50" />
+          <Property Name="class_tv" Type="char" MaxLength="1" />
+          <Property Name="ann" Type="bit" />
+          <Property Name="lg" Type="varchar" MaxLength="5" />
+          <Property Name="on_plan" Type="nvarchar" MaxLength="100" />
+          <Property Name="on_route" Type="varchar" MaxLength="5" />
+          <Property Name="vip" Type="nvarchar" MaxLength="50" />
+          <Property Name="knbgoc" Type="nvarchar" MaxLength="100" />
+          <Property Name="kn_khac" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="char" MaxLength="2" />
+          <Property Name="baclg" Type="varchar" MaxLength="50" />
+          <Property Name="ngaynhan" Type="date" />
+          <Property Name="ngayve" Type="date" />
+          <Property Name="ttut" Type="real" />
+          <Property Name="ma_tt" Type="real" />
+          <Property Name="fly_time" Type="int" />
+          <Property Name="int_time" Type="int" />
+          <Property Name="duty_time" Type="int" />
+          <Property Name="sochbay" Type="int" />
+          <Property Name="dubi" Type="int" />
+          <Property Name="night" Type="int" />
+          <Property Name="lc" Type="char" MaxLength="1" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+          <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+          <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_SabreLoader">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FlightId" Type="int" />
+          <Property Name="Date" Type="date" />
+          <Property Name="FlightNo" Type="varchar" MaxLength="10" />
+          <Property Name="Routing" Type="varchar" MaxLength="50" />
+          <Property Name="Category" Type="int" />
+          <Property Name="Request" Type="varchar" MaxLength="100" />
+          <Property Name="Response" Type="varchar(max)" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+          <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="ERMSModelStoreContainer">
+          <EntitySet Name="CR_Dbf_lbmb" EntityType="Self.CR_Dbf_lbmb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CR_FlightInfo" EntityType="Self.CR_FlightInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ER_Employee" EntityType="Self.ER_Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_SabreLoader" EntityType="Self.Sys_SabreLoader" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CR_Dbf_lbmb">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codefly" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CodeApl" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TypeApl" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Acf" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FlightNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Leg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="StartTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="EndTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AcfNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Cfg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Base" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UserNane" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EditDate" Type="DateTime" Precision="0" />
+          <Property Name="EditTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CR_FlightInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="FlightNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Routing" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aircraft" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RegisterNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UTC" Type="DateTime" Precision="3" />
+          <Property Name="Departed" Type="DateTime" Precision="3" />
+          <Property Name="Arrived" Type="DateTime" Precision="3" />
+          <Property Name="Parking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeApl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Acf" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AcfNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Carry" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PaxC" Type="Int32" />
+          <Property Name="PaxI" Type="Int32" />
+          <Property Name="PaxY" Type="Int32" />
+          <Property Name="VIP" Type="Int32" />
+          <Property Name="CIP" Type="Int32" />
+          <Property Name="PaxBooking" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PaxClosed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Wchr" Type="Int32" />
+          <Property Name="SM" Type="Int32" />
+          <Property Name="BSCT" Type="Int32" />
+          <Property Name="INF" Type="Int32" />
+          <Property Name="UM" Type="Int32" />
+          <Property Name="BLND" Type="Int32" />
+          <Property Name="DEAF" Type="Int32" />
+          <Property Name="STCR" Type="Int32" />
+          <Property Name="EXST" Type="Int32" />
+          <Property Name="DEPU" Type="Int32" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ER_Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code_tv" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="name_tv" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="man" Type="Boolean" />
+          <Property Name="dob" Type="DateTime" Precision="0" />
+          <Property Name="noisinh" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="quoctich" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pag_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pport_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="noicap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Group" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="course" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="main_base" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="from_place" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="start_date" Type="DateTime" Precision="3" />
+          <Property Name="end_date" Type="DateTime" Precision="3" />
+          <Property Name="home" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="type_tv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="term_tv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="class_tv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ann" Type="Boolean" />
+          <Property Name="lg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="on_plan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="on_route" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="vip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="knbgoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="kn_khac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="baclg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ngaynhan" Type="DateTime" Precision="0" />
+          <Property Name="ngayve" Type="DateTime" Precision="0" />
+          <Property Name="ttut" Type="Single" />
+          <Property Name="ma_tt" Type="Single" />
+          <Property Name="fly_time" Type="Int32" />
+          <Property Name="int_time" Type="Int32" />
+          <Property Name="duty_time" Type="Int32" />
+          <Property Name="sochbay" Type="Int32" />
+          <Property Name="dubi" Type="Int32" />
+          <Property Name="night" Type="Int32" />
+          <Property Name="lc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_SabreLoader">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FlightId" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="FlightNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Routing" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="Int32" />
+          <Property Name="Request" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Response" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ERMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CR_Dbf_lbmb" EntityType="Self.CR_Dbf_lbmb" />
+          <EntitySet Name="CR_FlightInfo" EntityType="Self.CR_FlightInfo" />
+          <EntitySet Name="ER_Employee" EntityType="Self.ER_Employee" />
+          <EntitySet Name="Sys_SabreLoader" EntityType="Self.Sys_SabreLoader" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERMSModelStoreContainer" CdmEntityContainer="ERMSEntities">
+          <EntitySetMapping Name="CR_Dbf_lbmb">
+            <EntityTypeMapping TypeName="ERMSModel.CR_Dbf_lbmb">
+              <MappingFragment StoreEntitySet="CR_Dbf_lbmb">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Codefly" ColumnName="Codefly" />
+                <ScalarProperty Name="CodeApl" ColumnName="CodeApl" />
+                <ScalarProperty Name="TypeApl" ColumnName="TypeApl" />
+                <ScalarProperty Name="Acf" ColumnName="Acf" />
+                <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+                <ScalarProperty Name="Leg" ColumnName="Leg" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="AcfNo" ColumnName="AcfNo" />
+                <ScalarProperty Name="Cfg" ColumnName="Cfg" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Base" ColumnName="Base" />
+                <ScalarProperty Name="UserNane" ColumnName="UserNane" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+                <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+                <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CR_FlightInfo">
+            <EntityTypeMapping TypeName="ERMSModel.CR_FlightInfo">
+              <MappingFragment StoreEntitySet="CR_FlightInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+                <ScalarProperty Name="Routing" ColumnName="Routing" />
+                <ScalarProperty Name="Aircraft" ColumnName="Aircraft" />
+                <ScalarProperty Name="RegisterNo" ColumnName="RegisterNo" />
+                <ScalarProperty Name="UTC" ColumnName="UTC" />
+                <ScalarProperty Name="Departed" ColumnName="Departed" />
+                <ScalarProperty Name="Arrived" ColumnName="Arrived" />
+                <ScalarProperty Name="Parking" ColumnName="Parking" />
+                <ScalarProperty Name="Gate" ColumnName="Gate" />
+                <ScalarProperty Name="TypeApl" ColumnName="TypeApl" />
+                <ScalarProperty Name="Acf" ColumnName="Acf" />
+                <ScalarProperty Name="AcfNo" ColumnName="AcfNo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Carry" ColumnName="Carry" />
+                <ScalarProperty Name="PaxC" ColumnName="PaxC" />
+                <ScalarProperty Name="PaxI" ColumnName="PaxI" />
+                <ScalarProperty Name="PaxY" ColumnName="PaxY" />
+                <ScalarProperty Name="VIP" ColumnName="VIP" />
+                <ScalarProperty Name="CIP" ColumnName="CIP" />
+                <ScalarProperty Name="PaxBooking" ColumnName="PaxBooking" />
+                <ScalarProperty Name="PaxClosed" ColumnName="PaxClosed" />
+                <ScalarProperty Name="Wchr" ColumnName="Wchr" />
+                <ScalarProperty Name="SM" ColumnName="SM" />
+                <ScalarProperty Name="BSCT" ColumnName="BSCT" />
+                <ScalarProperty Name="INF" ColumnName="INF" />
+                <ScalarProperty Name="UM" ColumnName="UM" />
+                <ScalarProperty Name="BLND" ColumnName="BLND" />
+                <ScalarProperty Name="DEAF" ColumnName="DEAF" />
+                <ScalarProperty Name="STCR" ColumnName="STCR" />
+                <ScalarProperty Name="EXST" ColumnName="EXST" />
+                <ScalarProperty Name="DEPU" ColumnName="DEPU" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+                <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+                <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ER_Employee">
+            <EntityTypeMapping TypeName="ERMSModel.ER_Employee">
+              <MappingFragment StoreEntitySet="ER_Employee">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code_tv" ColumnName="Code_tv" />
+                <ScalarProperty Name="name_tv" ColumnName="name_tv" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="man" ColumnName="man" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="noisinh" ColumnName="noisinh" />
+                <ScalarProperty Name="quoctich" ColumnName="quoctich" />
+                <ScalarProperty Name="pag_no" ColumnName="pag_no" />
+                <ScalarProperty Name="pport_no" ColumnName="pport_no" />
+                <ScalarProperty Name="noicap" ColumnName="noicap" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="course" ColumnName="course" />
+                <ScalarProperty Name="main_base" ColumnName="main_base" />
+                <ScalarProperty Name="from_place" ColumnName="from_place" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="home" ColumnName="home" />
+                <ScalarProperty Name="type_tv" ColumnName="type_tv" />
+                <ScalarProperty Name="term_tv" ColumnName="term_tv" />
+                <ScalarProperty Name="class_tv" ColumnName="class_tv" />
+                <ScalarProperty Name="ann" ColumnName="ann" />
+                <ScalarProperty Name="lg" ColumnName="lg" />
+                <ScalarProperty Name="on_plan" ColumnName="on_plan" />
+                <ScalarProperty Name="on_route" ColumnName="on_route" />
+                <ScalarProperty Name="vip" ColumnName="vip" />
+                <ScalarProperty Name="knbgoc" ColumnName="knbgoc" />
+                <ScalarProperty Name="kn_khac" ColumnName="kn_khac" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="baclg" ColumnName="baclg" />
+                <ScalarProperty Name="ngaynhan" ColumnName="ngaynhan" />
+                <ScalarProperty Name="ngayve" ColumnName="ngayve" />
+                <ScalarProperty Name="ttut" ColumnName="ttut" />
+                <ScalarProperty Name="ma_tt" ColumnName="ma_tt" />
+                <ScalarProperty Name="fly_time" ColumnName="fly_time" />
+                <ScalarProperty Name="int_time" ColumnName="int_time" />
+                <ScalarProperty Name="duty_time" ColumnName="duty_time" />
+                <ScalarProperty Name="sochbay" ColumnName="sochbay" />
+                <ScalarProperty Name="dubi" ColumnName="dubi" />
+                <ScalarProperty Name="night" ColumnName="night" />
+                <ScalarProperty Name="lc" ColumnName="lc" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+                <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+                <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_SabreLoader">
+            <EntityTypeMapping TypeName="ERMSModel.Sys_SabreLoader">
+              <MappingFragment StoreEntitySet="Sys_SabreLoader">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FlightId" ColumnName="FlightId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+                <ScalarProperty Name="Routing" ColumnName="Routing" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Request" ColumnName="Request" />
+                <ScalarProperty Name="Response" ColumnName="Response" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+                <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

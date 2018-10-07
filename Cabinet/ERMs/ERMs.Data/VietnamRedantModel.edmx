@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VietnamRedantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'VietnamRedant.dbo.PView_giadinh1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PView_giadinh1">
+          <Key>
+            <PropertyRef Name="mans" />
+            <PropertyRef Name="loains" />
+            <PropertyRef Name="loainhansu" />
+            <PropertyRef Name="ngaysinh" />
+            <PropertyRef Name="bophanlamviec" />
+            <PropertyRef Name="bophan" />
+          </Key>
+          <Property Name="mans" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="loains" Type="int" Nullable="false" />
+          <Property Name="loainhansu" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="loaiquanhe" Type="int" />
+          <Property Name="quanhe" Type="nvarchar" MaxLength="50" />
+          <Property Name="hoten" Type="nvarchar" MaxLength="65" />
+          <Property Name="ngaysinh" Type="smalldatetime" Nullable="false" />
+          <Property Name="cmnd_so" Type="nvarchar" MaxLength="20" />
+          <Property Name="bophanlamviec" Type="int" Nullable="false" />
+          <Property Name="bophan" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="bienche_ngay" Type="smalldatetime" />
+          <Property Name="bienche_tct" Type="smalldatetime" />
+          <Property Name="bienche_dtv" Type="smalldatetime" />
+          <Property Name="nghiviec" Type="bit" />
+          <Property Name="giadinhid" Type="int" />
+          <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="VietnamRedantModelStoreContainer">
+          <EntitySet Name="PView_giadinh1" EntityType="Self.PView_giadinh1" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PView_giadinh1].[mans] AS [mans], 
+    [PView_giadinh1].[loains] AS [loains], 
+    [PView_giadinh1].[loainhansu] AS [loainhansu], 
+    [PView_giadinh1].[loaiquanhe] AS [loaiquanhe], 
+    [PView_giadinh1].[quanhe] AS [quanhe], 
+    [PView_giadinh1].[hoten] AS [hoten], 
+    [PView_giadinh1].[ngaysinh] AS [ngaysinh], 
+    [PView_giadinh1].[cmnd_so] AS [cmnd_so], 
+    [PView_giadinh1].[bophanlamviec] AS [bophanlamviec], 
+    [PView_giadinh1].[bophan] AS [bophan], 
+    [PView_giadinh1].[bienche_ngay] AS [bienche_ngay], 
+    [PView_giadinh1].[bienche_tct] AS [bienche_tct], 
+    [PView_giadinh1].[bienche_dtv] AS [bienche_dtv], 
+    [PView_giadinh1].[nghiviec] AS [nghiviec], 
+    [PView_giadinh1].[giadinhid] AS [giadinhid], 
+    [PView_giadinh1].[Firstname] AS [Firstname]
+    FROM [dbo].[PView_giadinh1] AS [PView_giadinh1]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VietnamRedantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PView_giadinh1">
+          <Key>
+            <PropertyRef Name="mans" />
+            <PropertyRef Name="loains" />
+            <PropertyRef Name="loainhansu" />
+            <PropertyRef Name="ngaysinh" />
+            <PropertyRef Name="bophanlamviec" />
+            <PropertyRef Name="bophan" />
+          </Key>
+          <Property Name="mans" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="loains" Type="Int32" Nullable="false" />
+          <Property Name="loainhansu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="loaiquanhe" Type="Int32" />
+          <Property Name="quanhe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hoten" Type="String" MaxLength="65" FixedLength="false" Unicode="true" />
+          <Property Name="ngaysinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="cmnd_so" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="bophanlamviec" Type="Int32" Nullable="false" />
+          <Property Name="bophan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="bienche_ngay" Type="DateTime" Precision="0" />
+          <Property Name="bienche_tct" Type="DateTime" Precision="0" />
+          <Property Name="bienche_dtv" Type="DateTime" Precision="0" />
+          <Property Name="nghiviec" Type="Boolean" />
+          <Property Name="giadinhid" Type="Int32" />
+          <Property Name="Firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="VietnamRedantEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PView_giadinh1" EntityType="Self.PView_giadinh1" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VietnamRedantModelStoreContainer" CdmEntityContainer="VietnamRedantEntities">
+          <EntitySetMapping Name="PView_giadinh1">
+            <EntityTypeMapping TypeName="VietnamRedantModel.PView_giadinh1">
+              <MappingFragment StoreEntitySet="PView_giadinh1">
+                <ScalarProperty Name="mans" ColumnName="mans" />
+                <ScalarProperty Name="loains" ColumnName="loains" />
+                <ScalarProperty Name="loainhansu" ColumnName="loainhansu" />
+                <ScalarProperty Name="loaiquanhe" ColumnName="loaiquanhe" />
+                <ScalarProperty Name="quanhe" ColumnName="quanhe" />
+                <ScalarProperty Name="hoten" ColumnName="hoten" />
+                <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+                <ScalarProperty Name="cmnd_so" ColumnName="cmnd_so" />
+                <ScalarProperty Name="bophanlamviec" ColumnName="bophanlamviec" />
+                <ScalarProperty Name="bophan" ColumnName="bophan" />
+                <ScalarProperty Name="bienche_ngay" ColumnName="bienche_ngay" />
+                <ScalarProperty Name="bienche_tct" ColumnName="bienche_tct" />
+                <ScalarProperty Name="bienche_dtv" ColumnName="bienche_dtv" />
+                <ScalarProperty Name="nghiviec" ColumnName="nghiviec" />
+                <ScalarProperty Name="giadinhid" ColumnName="giadinhid" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

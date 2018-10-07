@@ -1,0 +1,9 @@
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.csprojResolveAssemblyReference.cache
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.FrmFormHistory.resources
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.FrmMain.resources
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.FrmRoute.resources
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.FrmTicket.resources
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.FrmTicketHistory.resources
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.Properties.Resources.resources
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.csproj.GenerateResource.Cache
+F:\Cabinnet\Cabinet\ERMs\eTicket\obj\Debug\eTicket.exe.licenses
